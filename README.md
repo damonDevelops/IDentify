@@ -1,4 +1,7 @@
 # IDentify 
+## What is This Repo?
+This repo is to demonstrate our finaly year university project called 'IDentify'. We developed this system over the space of 10 months with 6 developers. This system was awarded 2nd at the SCIT Tradeshow for the University of Wollongong in 2023 and is a cumulation of three years of studying Computer Science / Information Technology Respectively. The backend is quite resource intensive and this repo has simply been hosted with an archive, I make no guarantee that the frontend or backend work, rather a demonstration of my / my team's ability to work on a project similar to a professional setting and build an excellent product.
+
 
 ## Summary
 
