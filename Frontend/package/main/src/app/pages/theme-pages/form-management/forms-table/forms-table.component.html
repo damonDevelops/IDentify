@@ -1,0 +1,39 @@
+<mat-accordion>
+  <mat-expansion-panel
+    *ngFor="let form of forms"
+    [expanded]="expandedFormId === form.id"
+    (opened)="toggleExpansion(form.id)"
+    (closed)="toggleExpansion(null)"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ form.fileName }}</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-card-content>
+      <div>
+        <p><strong>Description:</strong> {{ form.description }}</p>
+      </div>
+
+      <section>
+        <div class="example-button-row">
+          <button
+            mat-raised-button
+            color="primary"
+            class="mat-margin-right"
+            (click)="openUpdateFormDialog(form)"
+          >
+            Update Form
+          </button>
+          <button
+            mat-raised-button
+            color="warn"
+            (click)="openDeleteFormDialog(form)"
+          >
+            Delete Form
+          </button>
+        </div>
+      </section>
+    </mat-card-content>
+    <p>{{ form.data }}</p>
+    <!-- Add more content here if needed -->
+  </mat-expansion-panel>
+</mat-accordion>

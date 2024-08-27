@@ -1,0 +1,46 @@
+<div class="form-container">
+  <h2 mat-dialog-title>Update Email</h2>
+</div>
+
+<div mat-dialog-content>
+  <form [formGroup]="emailForm">
+    <div class="form-container">
+      <mat-form-field>
+        <mat-label>New Email</mat-label>
+        <input
+          matInput
+          type="email"
+          placeholder="New Email"
+          formControlName="newEmail"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Confirm New Email</mat-label>
+        <input
+          matInput
+          type="email"
+          placeholder="Confirm New Email"
+          formControlName="confirmNewEmail"
+        />
+      </mat-form-field>
+
+      <p *ngIf="emailForm.hasError('emailMismatch')" class="error-message">
+        Emails don't match.
+      </p>
+      <p
+        *ngIf="emailForm.get('newEmail')!.hasError('pattern')"
+        class="error-message"
+      >
+        Invalid email format.
+      </p>
+    </div>
+  </form>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onCloseClick()">Cancel</button>
+  <button mat-button (click)="onSubmitClick()" [disabled]="!emailForm.valid">
+    Update
+  </button>
+</div>

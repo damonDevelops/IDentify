@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Confirm Changes</h1>
+<div mat-dialog-content style="text-align: center">
+  Are you sure you want to update your email or password?
+</div>
+<div
+  mat-dialog-actions
+  style="display: flex; justify-content: center; margin-top: -5px"
+>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    (click)="updateInformation()"
+  >
+    Yes
+  </button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="closeDialog()">
+    No
+  </button>
+</div>

@@ -1,0 +1,55 @@
+<mat-card class="cardWithShadow">
+  <mat-card-header>
+    <mat-card-title>Collection Point QR Code</mat-card-title>
+    <mat-card-subtitle class="mat-body-1"
+      >Choose a collection point to generate a QR code. Customers can scan this
+      QR code to submit images to the selected collection
+      point</mat-card-subtitle
+    >
+  </mat-card-header>
+
+  <mat-card-content class="p-24">
+    <mat-form-field appearance="outline" class="hide-hint">
+      <mat-label>Select a Collection Point</mat-label>
+      <input
+        matInput
+        placeholder="Select a Collection Point"
+        [matAutocomplete]="auto"
+        [(ngModel)]="selectedCollectionPoint"
+        (input)="onCollectionPointSelected()"
+      />
+      <mat-autocomplete
+        #auto="matAutocomplete"
+        (optionSelected)="onGenerateQR()"
+      >
+        <mat-option
+          *ngFor="let point of collectionPoints"
+          [value]="point.endpoint"
+        >
+          {{ point.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <div class="qrcodeImage" [hidden]="isQRHidden">
+      <qrcode
+        (qrCodeURL)="onDownloadUrl($event)"
+        qrdata="{{ qrCodeUrl + '/?endpoint=' + getEndpointB64() }}"
+        [allowEmptyString]="true"
+        [cssClass]="'center'"
+        [colorDark]="'#000000ff'"
+        [colorLight]="'#ffffffff'"
+        [elementType]="'canvas'"
+        [errorCorrectionLevel]="'M'"
+        [imageSrc]="qrCodeLogo"
+        [imageHeight]="70"
+        [imageWidth]="70"
+        [margin]="4"
+        [scale]="1"
+        [width]="300"
+      ></qrcode>
+      <a [href]="qrCodeImagePath" download="qrcode">
+        <button mat-raised-button color="primary">Download QR Code</button>
+      </a>
+    </div>
+  </mat-card-content>
+</mat-card>

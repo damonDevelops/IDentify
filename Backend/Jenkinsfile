@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    environment {
+        GITEA_TOKEN = credentials('5b749a59-7dac-46d0-9c78-a18515c3cda5')
+    }
+    stages {
+        stage('Get from VCS') {
+            steps {
+                git branch: 'batesy', credentialsId: '5b749a59-7dac-46d0-9c78-a18515c3cda5', url: 'https://git.identify.rodeo/IDentify/IdentifyAPI.git'
+            }
+        }
+        stage('Test & Build WAR') {
+            steps {
+                sh 'docker compose up -d'
+                sh './mvnw package'
+                sh 'docker compose down'
+            }
+        }
+        stage('Upload .war to gitea') {
+            steps {
+                sh 'curl --user jenkins:$GITEA_TOKEN --upload-file target/*.war https:///git.identify.rodeo/api/packages/Identify/IdentifyAPI/nightly/$BUILD_TAG.war'
+            }
+        }
+    }
+}

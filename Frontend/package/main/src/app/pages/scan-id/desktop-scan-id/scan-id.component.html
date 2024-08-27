@@ -1,0 +1,110 @@
+<mat-card class="cardWithShadow">
+  <mat-card-content class="p-24 m-b-24">
+    <mat-card-title>Scan a New ID</mat-card-title>
+    <mat-card-subtitle
+      >Upload a new identification card for processing</mat-card-subtitle
+    >
+    <mat-card-subtitle
+      >You can upload up to 20 cards at a time</mat-card-subtitle
+    >
+
+    <div class="drop-area-div">
+      <div
+        class="drop-area"
+        *ngIf="isDesktop"
+        (dragover)="onDragOver($event)"
+        (dragleave)="onDragLeave($event)"
+        (drop)="onDrop($event)"
+      >
+        <p>Drag and drop images here</p>
+      </div>
+    </div>
+    <div class="drag-drop-container">
+      <div class="image-grid">
+        <div
+          *ngFor="let preview of imagePreviews; let i = index"
+          class="image-preview"
+        >
+          <div class="image-preview-container">
+            <img [src]="preview" alt="Preview" class="image-preview-img" />
+            <button class="close-button" (click)="removeImage(i)">
+              <img
+                src="assets/images/logos/cancel-logo.svg"
+                alt="Close"
+                class="close-icon"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="autocomplete-container" id="step5">
+      <mat-form-field>
+        <mat-label>Select a Collection Point</mat-label>
+        <input
+          matInput
+          placeholder="Select a Collection Point"
+          [matAutocomplete]="auto"
+          [(ngModel)]="selectedCollectionPoint"
+        />
+        <mat-autocomplete
+          #auto="matAutocomplete"
+          [displayWith]="displayPointName"
+        >
+          <mat-option *ngFor="let point of collectionPoints" [value]="point">
+            {{ point.name }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <div
+      class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+    >
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="fileInput.click()"
+        style="margin-bottom: 8px"
+        [disabled]="!selectedCollectionPoint || !hasImageBeenUploaded"
+      >
+        Upload Image
+      </button>
+      <input
+        hidden
+        accept=".png,.jpg"
+        (change)="onChangeFile($event)"
+        #fileInput
+        type="file"
+        id="file"
+        multiple
+      />
+    </div>
+    <div
+      class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+    >
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="!selectedCollectionPoint || selectedFiles.length === 0"
+        (click)="processImages($event)"
+        style="margin-bottom: 8px"
+      >
+        Submit for Processing
+      </button>
+    </div>
+    <div
+      class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+    >
+      <button
+        mat-raised-button
+        color="warn"
+        [disabled]="!selectedFiles.length"
+        (click)="clearSelectedFiles()"
+      >
+        Remove Images
+      </button>
+    </div>
+  </mat-card-content>
+  <mat-card-content class="p-24"> </mat-card-content>
+</mat-card>

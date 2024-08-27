@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Confirm Card Details</h2>
+
+<mat-dialog-content>
+  <h3>
+    Please ensure your card details match what our system has found. If not,
+    make adjustments then confirm.
+  </h3>
+  <form>
+    <div class="property-container" *ngFor="let property of cardProperties">
+      <div class="property-name">{{ property.name }}:</div>
+      <div
+        [ngClass]="{
+          'property-values-single': property.values.length === 1,
+          'property-values': property.values.length > 1
+        }"
+      >
+        <mat-form-field
+          class="input-container"
+          *ngFor="let value of property.values; let i = index"
+          appearance="outline"
+          color="primary"
+        >
+          <input
+            matInput
+            [name]="property.name + '_' + i"
+            [(ngModel)]="value[0]"
+            required
+          />
+          <mat-hint *ngIf="!value[0]" class="error-msg"
+            >Field is required.</mat-hint
+          >
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-button
+    color="primary"
+    (click)="saveChanges()"
+    [disabled]="!isFormValid()"
+  >
+    Confirm
+  </button>
+</mat-dialog-actions>

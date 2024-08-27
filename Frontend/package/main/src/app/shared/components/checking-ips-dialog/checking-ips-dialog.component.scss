@@ -1,0 +1,90 @@
+/* Add styles to adjust the size and alignment of the image and spinner */
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Add relative positioning */
+}
+
+.processing-image {
+  max-width: 150px; /* Adjust the size to your preference */
+  max-height: 150px; /* Adjust the size to your preference */
+  opacity: 0.5;
+  border-radius: 8px; /* Match the rounded corners of the container */
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -moz-animation: ellipsis 2s infinite;
+  animation: ellipsis 2s infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+}
+
+@-moz-keyframes ellipsis {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  24.9% {
+    clip-path: inset(0 100% 0 0);
+  }
+  25% {
+    clip-path: inset(0 66.6% 0 0);
+  }
+  49.9% {
+    clip-path: inset(0 66.6% 0 0);
+  }
+  50% {
+    clip-path: inset(0 33.3% 0 0);
+  }
+  74.9% {
+    clip-path: inset(0 33.3% 0 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes ellipsis {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  24.9% {
+    clip-path: inset(0 100% 0 0);
+  }
+  25% {
+    clip-path: inset(0 66.6% 0 0);
+  }
+  49.9% {
+    clip-path: inset(0 66.6% 0 0);
+  }
+  50% {
+    clip-path: inset(0 33.3% 0 0);
+  }
+  74.9% {
+    clip-path: inset(0 33.3% 0 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}

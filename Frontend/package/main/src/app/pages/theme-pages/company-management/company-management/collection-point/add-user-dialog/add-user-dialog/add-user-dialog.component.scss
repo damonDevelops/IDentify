@@ -1,0 +1,23 @@
+/* Add this CSS to your component's style file or your global styles */
+.form-container {
+  display: flex;
+  flex-direction: column; /* Align form fields vertically */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically */
+  text-align: center; /* Center text within form fields */
+}
+
+.wider-textarea {
+  width: 100%; /* Set the width to 100% to make it expand horizontally */
+}
+
+/* Add these styles to your component's CSS file */
+.success {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.error {
+  background-color: #f44336;
+  color: #fff;
+}

@@ -1,0 +1,163 @@
+<mat-toolbar class="topbar">
+  <app-branding></app-branding>
+
+  <!-- --------------------------------------------------------------- -->
+  <!-- Desktop Menu -->
+  <button
+    mat-icon-button
+    (click)="toggleCollapsed.emit()"
+    *ngIf="showToggle"
+    class="d-flex justify-content-center"
+  >
+    <i-tabler name="menu-2" class="icon-20 d-flex"></i-tabler>
+  </button>
+
+  <!-- Mobile Menu -->
+  <button
+    mat-icon-button
+    (click)="toggleMobileNav.emit()"
+    *ngIf="!showToggle"
+    class="d-flex justify-content-center"
+  >
+    <i-tabler name="menu-2" class="icon-20 d-flex"></i-tabler>
+  </button>
+  <!-- --------------------------------------------------------------- -->
+
+  <!-- --------------------------------------------------------------- -->
+  <!--  Search -->
+  <!-- --------------------------------------------------------------- -->
+  <!-- <button
+    mat-icon-button
+    (click)="openDialog()"
+    class="d-flex justify-content-center"
+  >
+    <i-tabler name="search" class="icon-20 d-flex"></i-tabler>
+  </button> -->
+
+  <!-- Leave this here, keeps the profile on the right hand side -->
+  <span class="flex-1-auto"></span>
+
+  <!-- --------------------------------------------------------------- -->
+  <!-- profile Dropdown -->
+  <!-- --------------------------------------------------------------- -->
+  <button
+    id="step5"
+    mat-icon-button
+    (click)="showTutorial()"
+    aria-label="Notifications"
+  >
+    <img
+      src="/assets/images/logos/supportv2.png"
+      class="rounded-circle object-cover"
+      width="30"
+      height="30"
+    />
+  </button>
+
+  <button
+    id="step4"
+    mat-icon-button
+    [matMenuTriggerFor]="profilemenu"
+    aria-label="Notifications"
+  >
+    <img
+      src="/assets/images/profile/newest.png"
+      class="rounded-circle object-cover"
+      width="30"
+      height="30"
+    />
+  </button>
+  <mat-menu #profilemenu="matMenu" class="topbar-dd cardWithShadow">
+    <ng-scrollbar class="position-relative" style="height: 380px">
+      <div class="p-x-32 p-y-16">
+        <h6
+          class="f-s-20 f-w-600 m-0 mb-2 text-center"
+          style="border-bottom: 1px solid #000; padding-bottom: 8px"
+        >
+          User Profile
+        </h6>
+      </div>
+      <div class="p-x-32">
+        <a
+          class="p-y-16 text-decoration-none d-block text-hover-primary"
+          [routerLink]="[profile.link]"
+          *ngFor="let profile of profiledd"
+        >
+          <div class="d-flex align-items-center">
+            <button
+              mat-mini-fab
+              class="text-primary bg-light-primary shadow-none rounded"
+            >
+              <img [src]="profile.img" width="20" />
+            </button>
+
+            <div class="m-l-16">
+              <h5
+                class="f-s-14 f-w-600 m-0 textprimary mat-subtitle-1 hover-text"
+              >
+                {{ profile.title }}
+              </h5>
+              <span class="mat-body-1">{{ profile.subtitle }}</span>
+            </div>
+          </div>
+        </a>
+        <!-- Displays each company -->
+        <div *ngFor="let company of companies">
+          <a
+            class="p-y-16 text-decoration-none d-block text-hover-primary"
+            [class.selected]="company === activeCompany"
+            (click)="selectCompany(company)"
+          >
+            <div class="d-flex align-items-center">
+              <button
+                mat-mini-fab
+                class="text-primary bg-light-primary shadow-none rounded"
+              >
+                <img [src]="company.img" width="20" />
+              </button>
+
+              <div class="m-l-16">
+                <h5
+                  class="f-s-14 f-w-600 m-0 textprimary mat-subtitle-1 hover-text"
+                >
+                  {{ company.name }}
+                </h5>
+              </div>
+
+              <!-- Display the tick mark if the company is selected -->
+              <div class="tick" *ngIf="company.selected">&#10004;</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- upgrade -->
+        <!-- <div
+          class="p-24 overflow-hidden bg-light-primary rounded position-relative m-y-16"
+        >
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="f-s-18 m-0 f-w-600 m-b-12">
+                Unlimited <br />
+                Access
+              </h5>
+              <button mat-flat-button color="primary">Upgrade</button>
+            </div>
+            <div class="m-l-auto">
+              <img
+                src="/assets/images/backgrounds/unlimited-bg.png"
+                alt="upgrade-bg"
+                class="upgrade-bg"
+              />
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="p-y-12 p-x-32">
+        <a (click)="open()" mat-stroked-button color="primary" class="w-100"
+          >Logout</a
+        >
+      </div>
+    </ng-scrollbar>
+  </mat-menu>
+</mat-toolbar>

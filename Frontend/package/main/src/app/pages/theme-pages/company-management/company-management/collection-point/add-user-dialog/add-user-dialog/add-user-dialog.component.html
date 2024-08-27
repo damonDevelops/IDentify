@@ -1,0 +1,37 @@
+<div class="form-container">
+  <h2 mat-dialog-title>Grant User Access to '{{ data.collectionPointId }}'</h2>
+</div>
+
+<mat-dialog-content class="mat-typography">
+  <div class="form-container">
+    <mat-form-field class="example-full-width" [style.width.px]="250">
+      <mat-label>Employees</mat-label>
+      <input
+        type="text"
+        placeholder="Select an Employee"
+        aria-label="Employees"
+        matInput
+        [formControl]="myControl"
+        [matAutocomplete]="auto"
+        (click)="openAutocompletePanel()"
+      />
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let user of filteredOptions | async" [value]="user">
+          {{ user }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  <div class="form-container">
+    <mat-dialog-content class="mat-typography">
+      <p>
+        Warning! Granting user access to this endpoint will allow them to view
+        customer data associated, proceed with caution.
+      </p>
+    </mat-dialog-content>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close cdkfocusinitial>Cancel</button>
+  <button mat-button color="primary" (click)="addUserSubmit()">Add User</button>
+</mat-dialog-actions>

@@ -1,0 +1,20 @@
+<div class="row" id="step1">
+  <div class="col-lg-4" *ngIf="userHasViewCompanyPermission && hasCompany">
+    <app-redirect-id></app-redirect-id>
+  </div>
+  <div class="col-lg-4" *ngIf="hasCompany">
+    <app-qr-redirect-component></app-qr-redirect-component>
+  </div>
+  <div class="col-lg-4" *ngIf="hasCompany">
+    <app-scan-history-component></app-scan-history-component>
+  </div>
+  <div class="col-lg-4">
+    <app-company-management></app-company-management>
+  </div>
+  <div class="col-lg-4" *ngIf="hasCompany">
+    <app-form-management></app-form-management>
+  </div>
+  <div class="col-lg-4">
+    <app-account-settings></app-account-settings>
+  </div>
+</div>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+      <link rel="stylesheet" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link rel="stylesheet" href="how-it-works.component.scss" />
+      <title>How it Works Page</title>
+    </head>
+
+    <body>
+      <header class="main-header">
+        <h1><span>How It Works</span></h1>
+        <p>IDentify</p>
+      </header>
+      <main class="container">
+        <section class="card">
+          <div>
+            <br />
+            <br />
+            <br />
+            <h3>Signing up to a business</h3>
+            <p>
+              When joining a business, you can simply scan the provided QR code
+              instead of filling out traditional forms.
+              <br />
+              <br />
+              This method simplifies the joining process and saves time for both
+              the you and the business.
+            </p>
+            <!---- <a href="#" class="btn">QR Example</a> -->
+          </div>
+          <img
+            src="/assets/images/backgrounds/qrcode.svg"
+            alt=""
+            class="custom-qr-class"
+          />
+        </section>
+
+        <section class="card" data-aos="slide-left">
+          <!---- <img src="/assets/images/backgrounds/upload.png" alt=""> -->
+          <button class="card-button-upload" mat-raised-button color="primary">
+            Upload Image
+          </button>
+          <div>
+            <h3>Uploading an Image</h3>
+            <p>
+              Uploading an image is a simple as selecting the upload button and
+              choosing an image from whatever operating system IDentify is being
+              used on.
+            </p>
+            <br />
+            <br />
+          </div>
+        </section>
+
+        <section class="card" data-aos="slide-right">
+          <div>
+            <h3>Processing an Image</h3>
+            <p>
+              Once the image is uploaded, select the "Submit for Processing"
+              button, IDentify will then analyse the card and retrieve the
+              required information.
+              <br />
+              <br />
+              You may also remove the uploaded image by selecting "Remove
+              Image".
+            </p>
+          </div>
+          <div class="card-buttons">
+            <button mat-raised-button color="primary">
+              Submit for Processing
+            </button>
+            <button mat-raised-button color="warn">Remove Image</button>
+          </div>
+
+          <!--<img src="/assets/images/backgrounds/Submit.png" alt=""> -->
+        </section>
+
+        <section class="card" data-aos="slide-left">
+          <!-- <img src="/assets/images/backgrounds/DataStorage.JPG" alt=""> -->
+          <button class="custom-expand-button" mat-button color="primary">
+            Expand
+          </button>
+          <div>
+            <h3>Confirming Accurate Data is Recorded</h3>
+            <p>
+              You will be presented with a table of information scanned from
+              your ID card, this can be edited by hitting the "Expand" button to
+              ensure the captured information is correct.
+            </p>
+          </div>
+        </section>
+
+        <section class="card" data-aos="slide-right">
+          <div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h3>How Stored Data is Used</h3>
+            <p>
+              After your information is recorded, the business can then use your
+              information to sign you into their service.
+            </p>
+          </div>
+          <img
+            src="/assets/images/backgrounds/IDentifyLogoBlackText.svg"
+            alt=""
+          />
+        </section>
+        <header class="scan-return">
+          <h1>
+            <a href="http://localhost:4200/authentication/scan"
+              ><span>Return to Scan Page</span></a
+            >
+          </h1>
+        </header>
+      </main>
+
+      <!-- Footer   -->
+      <footer
+        class="w3-container w3-padding-16 d-flex justify-content-between"
+        id="footer"
+        *ngIf="showFooter"
+      >
+        <div class="w3-left">
+          <img src="assets/images/logos/IDentifyLogo.png" alt="Company Logo" />
+        </div>
+        <div class="footer-links">
+          <p class="w3-right">
+            <a
+              href="terms.html"
+              (mouseover)="showTerms = true"
+              (mouseout)="showTerms = false"
+              >Terms & Conditions</a
+            >
+          </p>
+        </div>
+        <div class="footer-info" *ngIf="showTerms">
+          <!-- Additional information for Terms & Conditions -->
+          <div *ngIf="showTerms">
+            <p class="italic-text">
+              By agreeing to our Terms and Conditions, users provide consent for
+              our servers to process their sensitive
+              <br />
+              information securely, It's important to note that we neither store
+              user photos nor share data with the business.
+            </p>
+            <p class="italic-text">
+              All information is encrypted within a secure database, safeguarded
+              against unauthorized access.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Top Left Logo 
+
+    <div class="blank-layout-container">
+        <div class="p-24 h-100">
+            <a>
+                <img src="./assets/images/backgrounds/IDentifyLogoBlackText.svg" class="align-middle m-2" alt="logo"
+                    width="140" height="35" />
+            </a>
+        </div>
+    --></body>
+  </body>
+</html>

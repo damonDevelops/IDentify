@@ -1,0 +1,11 @@
+<h1 mat-dialog-title class="center-text">Processing Images</h1>
+<div mat-dialog-content class="center-content">
+  <p *ngIf="currentImageIndex === 0" class="loading">Connecting to IPS</p>
+
+  <p *ngIf="currentImageIndex > 0" class="center-text">
+    Processing image {{ currentImageIndex }} of {{ data.totalImages }}
+  </p>
+  <div class="image-container">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

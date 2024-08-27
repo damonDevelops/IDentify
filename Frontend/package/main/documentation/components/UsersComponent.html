@@ -1,0 +1,1150 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IDentify Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">IDentify Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  UsersComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/authentication/users/users.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-users</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./users.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./users.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#columnsToDisplay" >columnsToDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#dataSource" >dataSource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                <a href="#editUserForm" >editUserForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#formatDate" >formatDate</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#roleFc" >roleFc</a>
+                            </li>
+                            <li>
+                                <a href="#roleList" >roleList</a>
+                            </li>
+                            <li>
+                                <a href="#selectedUser" >selectedUser</a>
+                            </li>
+                            <li>
+                                <a href="#userSelected" >userSelected</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onEditSubmission" >onEditSubmission</a>
+                            </li>
+                            <li>
+                                <a href="#openNewUser" >openNewUser</a>
+                            </li>
+                            <li>
+                                <a href="#refresh" >refresh</a>
+                            </li>
+                            <li>
+                                <a href="#selectUser" >selectUser</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#form" >form</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(userManagementService: <a href="../interfaces/User.html" target="_self">UserManagementService</a>, formBuilder: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>, dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userManagementService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/User.html" target="_self" >UserManagementService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Form.html" target="_self" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/pages/authentication/users/users.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onEditSubmission"></a>
+                    <span class="name">
+                        <span ><b>onEditSubmission</b></span>
+                        <a href="#onEditSubmission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onEditSubmission()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/pages/authentication/users/users.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openNewUser"></a>
+                    <span class="name">
+                        <span ><b>openNewUser</b></span>
+                        <a href="#openNewUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openNewUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/pages/authentication/users/users.component.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refresh"></a>
+                    <span class="name">
+                        <span ><b>refresh</b></span>
+                        <a href="#refresh"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refresh()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/pages/authentication/users/users.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectUser"></a>
+                    <span class="name">
+                        <span ><b>selectUser</b></span>
+                        <a href="#selectUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>selectUser(row: <a href="../interfaces/ApiUser.html" target="_self">ApiUser</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/pages/authentication/users/users.component.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>row</td>
+                                    <td>
+                                                <code><a href="../interfaces/ApiUser.html" target="_self" >ApiUser</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="columnsToDisplay"></a>
+                    <span class="name">
+                        <span ><b>columnsToDisplay</b></span>
+                        <a href="#columnsToDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&#x27;id&#x27;, &#x27;username&#x27;, &#x27;email&#x27;, &#x27;lastSeen&#x27;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataSource"></a>
+                    <span class="name">
+                        <span ><b>dataSource</b></span>
+                        <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/ApiUserDataSource.html" target="_self" >ApiUserDataSource</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editUserForm"></a>
+                    <span class="name">
+                        <span ><b>editUserForm</b></span>
+                        <a href="#editUserForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatDate"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>formatDate</b></span>
+                        <a href="#formatDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>formatDate</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roleFc"></a>
+                    <span class="name">
+                        <span ><b>roleFc</b></span>
+                        <a href="#roleFc"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormControl</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roleList"></a>
+                    <span class="name">
+                        <span ><b>roleList</b></span>
+                        <a href="#roleList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;String[]&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedUser"></a>
+                    <span class="name">
+                        <span ><b>selectedUser</b></span>
+                        <a href="#selectedUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ApiUser.html" target="_self" >ApiUser</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userSelected"></a>
+                    <span class="name">
+                        <span ><b>userSelected</b></span>
+                        <a href="#userSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="form"></a>
+                        <span class="name"><b>form</b><a href="#form"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>form()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/pages/authentication/users/users.component.ts:47</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { UserManagementService } from &#x27;../_services/user-management.service&#x27;;
+import { ApiUser } from &#x27;../_models/api_user&#x27;;
+import { ApiUserDataSource } from &#x27;./ApiUserDataSource&#x27;;
+import { formatDate } from &#x27;@angular/common&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from &#x27;@angular/forms&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { NewUserDialogComponent } from &#x27;../dialogs/newuser/newuser.component&#x27;;
+
+@Component({
+  selector: &#x27;app-users&#x27;,
+  templateUrl: &#x27;./users.component.html&#x27;,
+  styleUrls: [&#x27;./users.component.css&#x27;],
+})
+export class UsersComponent {
+  // @ts-ignore
+  dataSource: ApiUserDataSource;
+  userSelected &#x3D; false;
+  loading &#x3D; false;
+  selectedUser!: ApiUser;
+  columnsToDisplay &#x3D; [&#x27;id&#x27;, &#x27;username&#x27;, &#x27;email&#x27;, &#x27;lastSeen&#x27;];
+  roleList: Observable&lt;String[]&gt;;
+  roleFc!: FormControl;
+  editUserForm!: FormGroup;
+
+  constructor(
+    private userManagementService: UserManagementService,
+    private formBuilder: FormBuilder,
+    public dialog: MatDialog,
+  ) {
+    this.roleList &#x3D; userManagementService.getRoleEnum();
+  }
+  ngOnInit() {
+    this.dataSource &#x3D; new ApiUserDataSource(this.userManagementService);
+    this.editUserForm &#x3D; this.formBuilder.group({
+      roles: [[&#x27;&#x27;], Validators.required],
+      password: [&#x27;&#x27;],
+    });
+  }
+
+  get form() {
+    return this.editUserForm.controls;
+  }
+
+  protected readonly formatDate &#x3D; formatDate;
+
+  selectUser(row: ApiUser) {
+    this.selectedUser &#x3D; row;
+    this.userSelected &#x3D; true;
+    this.form[&#x27;roles&#x27;].setValue(this.selectedUser.systemRoles);
+  }
+
+  onEditSubmission() {
+    this.loading &#x3D; true;
+    console.log(this.selectedUser.systemRoles !&#x3D; this.form[&#x27;roles&#x27;].value);
+    if (this.selectedUser.id !&#x3D; undefined) {
+      if (this.form[&#x27;password&#x27;].value !&#x3D; &#x27;&#x27;) {
+        this.userManagementService
+          .setUserPassword(this.selectedUser.id, this.form[&#x27;password&#x27;].value)
+          .subscribe((val) &#x3D;&gt; console.log(val));
+      }
+      if (this.selectedUser.systemRoles !&#x3D; this.form[&#x27;roles&#x27;].value) {
+        this.userManagementService
+          .setUserRoles(this.selectedUser.id, this.form[&#x27;roles&#x27;].value)
+          .subscribe((val) &#x3D;&gt; console.log(val));
+      }
+    }
+    this.loading &#x3D; false;
+    this.refresh();
+  }
+
+  refresh() {
+    this.dataSource &#x3D; new ApiUserDataSource(this.userManagementService);
+  }
+
+  openNewUser(): void {
+    const dialogRef &#x3D; this.dialog.open(NewUserDialogComponent, {
+      width: &#x27;500px&#x27;,
+      data: { roleList: this.roleList },
+    });
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      this.refresh();
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;main&quot;&gt;
+  &lt;table class&#x3D;&quot;layout-table&quot;&gt;
+    &lt;tr&gt;
+      &lt;th class&#x3D;&quot;header&quot;&gt;
+        &lt;h1&gt;User management&lt;/h1&gt;
+      &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;table
+          mat-table
+          [dataSource]&#x3D;&quot;this.dataSource&quot;
+          class&#x3D;&quot;mat-elevation-z8&quot;
+        &gt;
+          &lt;ng-container matColumnDef&#x3D;&quot;id&quot;&gt;
+            &lt;th mat-header-cell *matHeaderCellDef&gt;ID&lt;/th&gt;
+            &lt;td mat-cell *matCellDef&#x3D;&quot;let apiUser&quot;&gt;{{ apiUser.id }}&lt;/td&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container matColumnDef&#x3D;&quot;username&quot;&gt;
+            &lt;th mat-header-cell *matHeaderCellDef&gt;Username&lt;/th&gt;
+            &lt;td mat-cell *matCellDef&#x3D;&quot;let apiUser&quot;&gt;{{ apiUser.username }}&lt;/td&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container matColumnDef&#x3D;&quot;email&quot;&gt;
+            &lt;th mat-header-cell *matHeaderCellDef&gt;Email&lt;/th&gt;
+            &lt;td mat-cell *matCellDef&#x3D;&quot;let apiUser&quot;&gt;{{ apiUser.email }}&lt;/td&gt;
+          &lt;/ng-container&gt;
+
+          &lt;ng-container matColumnDef&#x3D;&quot;lastSeen&quot;&gt;
+            &lt;th mat-header-cell *matHeaderCellDef&gt;Last Seen&lt;/th&gt;
+            &lt;td mat-cell *matCellDef&#x3D;&quot;let apiUser&quot;&gt;
+              {{ formatDate(apiUser.lastSeen, &quot;short&quot;, &quot;en-AU&quot;) }}
+            &lt;/td&gt;
+          &lt;/ng-container&gt;
+
+          &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;columnsToDisplay&quot;&gt;&lt;/tr&gt;
+          &lt;tr
+            mat-row
+            *matRowDef&#x3D;&quot;let apiUser; columns: columnsToDisplay&quot;
+            (click)&#x3D;&quot;selectUser(apiUser)&quot;
+          &gt;&lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;table class&#x3D;&quot;layout-table&quot;&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;button
+          type&#x3D;&quot;submit&quot;
+          mat-raised-button
+          [disabled]&#x3D;&quot;loading&quot;
+          form&#x3D;&quot;editUserForm&quot;
+          *ngIf&#x3D;&quot;userSelected&quot;
+        &gt;
+          &lt;span
+            class&#x3D;&quot;spinner-border spinner-border-sm mr-1&quot;
+            *ngIf&#x3D;&quot;loading&quot;
+          &gt;&lt;/span&gt;
+          Save Changes
+        &lt;/button&gt;
+      &lt;/td&gt;
+      &lt;td style&#x3D;&quot;float: right&quot;&gt;
+        &lt;button mat-raised-button color&#x3D;&quot;accent&quot; (click)&#x3D;&quot;openNewUser()&quot;&gt;
+          Add User
+        &lt;/button&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;div class&#x3D;&quot;user_edit&quot; style&#x3D;&quot;padding: 5px&quot; *ngIf&#x3D;&quot;userSelected&quot;&gt;
+    &lt;h1&gt;Editing {{ selectedUser.username }}&lt;/h1&gt;
+    &lt;form
+      id&#x3D;&quot;editUserForm&quot;
+      [formGroup]&#x3D;&quot;editUserForm&quot;
+      (ngSubmit)&#x3D;&quot;onEditSubmission()&quot;
+      class&#x3D;&quot;form-style&quot;
+    &gt;
+      &#x27;
+      &lt;mat-form-field style&#x3D;&quot;width: 500px&quot;&gt;
+        &lt;mat-label&gt;Roles&lt;/mat-label&gt;
+        &lt;mat-select formControlName&#x3D;&quot;roles&quot; multiple&gt;
+          &lt;mat-option *ngFor&#x3D;&quot;let role of roleList | async&quot; [value]&#x3D;&quot;role&quot;&gt;{{
+            role
+          }}&lt;/mat-option&gt;
+        &lt;/mat-select&gt;
+      &lt;/mat-form-field&gt;
+      &lt;mat-form-field&gt;
+        &lt;mat-label&gt;Password&lt;/mat-label&gt;
+        &lt;input
+          matInput
+          type&#x3D;&quot;password&quot;
+          formControlName&#x3D;&quot;password&quot;
+          class&#x3D;&quot;form-control&quot;
+          [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: this.form[&#x27;password&#x27;].errors }&quot;
+        /&gt;
+      &lt;/mat-form-field&gt;
+      &lt;br /&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./users.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.main {
+  padding: 100px;
+}
+
+.layout-table {
+  width: 100%;
+}
+
+mat-form-field {
+  padding: 5px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="main">  <table class="layout-table">    <tr>      <th class="header">        <h1>User management</h1>      </th>    </tr>    <tr>      <td>        <table          mat-table          [dataSource]="this.dataSource"          class="mat-elevation-z8"        >          <ng-container matColumnDef="id">            <th mat-header-cell *matHeaderCellDef>ID</th>            <td mat-cell *matCellDef="let apiUser">{{ apiUser.id }}</td>          </ng-container>          <ng-container matColumnDef="username">            <th mat-header-cell *matHeaderCellDef>Username</th>            <td mat-cell *matCellDef="let apiUser">{{ apiUser.username }}</td>          </ng-container>          <ng-container matColumnDef="email">            <th mat-header-cell *matHeaderCellDef>Email</th>            <td mat-cell *matCellDef="let apiUser">{{ apiUser.email }}</td>          </ng-container>          <ng-container matColumnDef="lastSeen">            <th mat-header-cell *matHeaderCellDef>Last Seen</th>            <td mat-cell *matCellDef="let apiUser">              {{ formatDate(apiUser.lastSeen, "short", "en-AU") }}            </td>          </ng-container>          <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>          <tr            mat-row            *matRowDef="let apiUser; columns: columnsToDisplay"            (click)="selectUser(apiUser)"          ></tr>        </table>      </td>    </tr>  </table>  <table class="layout-table">    <tr>      <td>        <button          type="submit"          mat-raised-button          [disabled]="loading"          form="editUserForm"          *ngIf="userSelected"        >          <span            class="spinner-border spinner-border-sm mr-1"            *ngIf="loading"          ></span>          Save Changes        </button>      </td>      <td style="float: right">        <button mat-raised-button color="accent" (click)="openNewUser()">          Add User        </button>      </td>    </tr>  </table>  <div class="user_edit" style="padding: 5px" *ngIf="userSelected">    <h1>Editing {{ selectedUser.username }}</h1>    <form      id="editUserForm"      [formGroup]="editUserForm"      (ngSubmit)="onEditSubmission()"      class="form-style"    >      \'      <mat-form-field style="width: 500px">        <mat-label>Roles</mat-label>        <mat-select formControlName="roles" multiple>          <mat-option *ngFor="let role of roleList | async" [value]="role">{{            role          }}</mat-option>        </mat-select>      </mat-form-field>      <mat-form-field>        <mat-label>Password</mat-label>        <input          matInput          type="password"          formControlName="password"          class="form-control"          [ngClass]="{ \'is-invalid\': this.form[\'password\'].errors }"        />      </mat-form-field>      <br />    </form>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountSettingComponent', 'selector': 'app-account-setting'},{'name': 'AddUserDialogComponent', 'selector': 'app-add-user-dialog'},{'name': 'AppAccountSettingsRedirectComponent', 'selector': 'app-account-settings'},{'name': 'AppBoxedForgotPasswordComponent', 'selector': 'app-boxed-forgot-password'},{'name': 'AppBoxedLoginComponent', 'selector': 'app-boxed-login'},{'name': 'AppBoxedRegisterComponent', 'selector': 'app-boxed-register'},{'name': 'AppBoxedTwoStepsComponent', 'selector': 'app-boxed-two-steps'},{'name': 'AppBreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'AppCompanyManagementRedirectComponent', 'selector': 'app-company-management'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDashboard1Component', 'selector': 'app-dashboard1'},{'name': 'AppErrorComponent', 'selector': 'app-error'},{'name': 'AppFormManagementRedirectComponent', 'selector': 'app-form-management'},{'name': 'AppHorizontalHeaderComponent', 'selector': 'app-horizontal-header'},{'name': 'AppHorizontalNavItemComponent', 'selector': 'app-horizontal-nav-item'},{'name': 'AppHorizontalSearchDialogComponent', 'selector': 'app-search-dialog'},{'name': 'AppHorizontalSidebarComponent', 'selector': 'app-horizontal-sidebar'},{'name': 'AppLandingpageComponent', 'selector': 'app-landingpage'},{'name': 'AppMaintenanceComponent', 'selector': 'app-maintenance'},{'name': 'AppMixTableComponent', 'selector': 'app-mix-table'},{'name': 'AppNavItemComponent', 'selector': 'app-nav-item'},{'name': 'AppQRCodeGenerationRedirectComponent', 'selector': 'app-qr-redirect-component'},{'name': 'AppScanHistoryRedirectWidget', 'selector': 'app-scan-history-component'},{'name': 'AppScanIdComponent', 'selector': 'app-scan-id'},{'name': 'AppScanIdRedirectComponent', 'selector': 'app-redirect-id'},{'name': 'AppSideForgotPasswordComponent', 'selector': 'app-side-forgot-password'},{'name': 'AppSideLoginComponent', 'selector': 'app-side-login'},{'name': 'AppSideRegisterComponent', 'selector': 'app-side-register'},{'name': 'AppSideTwoStepsComponent', 'selector': 'app-side-two-steps'},{'name': 'BlankComponent', 'selector': 'app-blank'},{'name': 'BrandingComponent', 'selector': 'app-branding'},{'name': 'CheckingIpsDialogComponent', 'selector': 'app-checking-ips-dialog'},{'name': 'CollectionPointComponent', 'selector': 'app-collection-point'},{'name': 'CollectionPointDeleteDialog', 'selector': 'delete-point-dialog'},{'name': 'CommonScanIdComponent', 'selector': 'app-common-scan-id'},{'name': 'CompanyManagementComponent', 'selector': 'app-company-management'},{'name': 'ConsentDialogComponent', 'selector': 'app-consent-dialog'},{'name': 'CreateCompanyComponent', 'selector': 'app-create-company'},{'name': 'CreateNewFormDialogComponent', 'selector': 'app-create-new-form-dialog'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DeactivatedCollectionPointDialogComponent', 'selector': 'app-deactivated-collection-point-dialog'},{'name': 'DeleteFormDialogComponent', 'selector': 'app-delete-form-dialog'},{'name': 'DesktopQrCodeScanIdComponent', 'selector': 'desktop-qr-code-scan-id'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'dialog-dialog'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'register-dialog'},{'name': 'ExpandDataModalMobileComponent', 'selector': 'app-expanded-data-modal'},{'name': 'ExpandedDataModalComponent', 'selector': 'app-expanded-data-modal'},{'name': 'FailedJobsDialogComponent', 'selector': 'app-failed-jobs-dialog'},{'name': 'FormDialogComponent', 'selector': 'app-expanded-form-dialog'},{'name': 'FormManagementComponent', 'selector': 'app-form-management'},{'name': 'FormsTableComponent', 'selector': 'app-forms-table'},{'name': 'FullComponent', 'selector': 'app-full'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HowDoesThisWorkDialogComponent', 'selector': 'app-how-does-this-work-dialog'},{'name': 'HowItWorksComponent', 'selector': 'app-how-it-works'},{'name': 'InviteUsersComponent', 'selector': 'app-invite-users'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'NoCollectionPointsDialogComponent', 'selector': 'app-no-collection-points-dialog'},{'name': 'RedirectDialogComponent', 'selector': 'app-redirect-dialog'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TimeoutDialogComponent', 'selector': 'app-timeout-dialog'},{'name': 'UpdateEmailDialogComponent', 'selector': 'app-update-email-dialog'},{'name': 'UpdateFormDialogComponent', 'selector': 'app-update-form-dialog'},{'name': 'UpdatePasswordDialogComponent', 'selector': 'app-update-password-dialog'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViewUsersComponent', 'selector': 'app-view-users'},{'name': 'WelcomeDialogComponent', 'selector': 'app-welcome-dialog'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'UsersComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UsersComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

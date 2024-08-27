@@ -1,0 +1,26 @@
+/* Add this style to your global CSS or component CSS file */
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px; /* Adjust the max-width as needed */
+  margin: auto;
+}
+
+/* If you don't want the image to exceed the max-width, you can add this */
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+.centered-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px; /* Adjust the margin as needed to create space between the content and the SVG */
+}
+
+.centered-svg img {
+  max-width: 120px; /* Adjust the max-width to control the size of the SVG */
+  max-height: 120px; /* Adjust the max-height to control the size of the SVG */
+}

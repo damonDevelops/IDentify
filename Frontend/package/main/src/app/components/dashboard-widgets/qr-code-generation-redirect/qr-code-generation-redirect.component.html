@@ -1,0 +1,21 @@
+<mat-card class="cardWithShadow">
+  <mat-card-content class="p-24 m-b-24">
+    <mat-card-title>Capture via QR</mat-card-title>
+    <mat-card-subtitle
+      >Scan an identification card via endpoint QR code</mat-card-subtitle
+    >
+    <div class="d-flex align-items-center justify-content-center">
+      <i-tabler name="qrcode" style="width: 60%; height: 60%"></i-tabler>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="redirect()"
+        style="margin-bottom: 8px"
+      >
+        Capture via QR
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,1152 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IDentify Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">IDentify Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  AppSideRegisterComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/authentication/side-register/side-register.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-side-register</code></td>
+            </tr>
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./side-register.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                <a href="#emailControl" >emailControl</a>
+                            </li>
+                            <li>
+                                <a href="#error" >error</a>
+                            </li>
+                            <li>
+                                <a href="#form" >form</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#options" >options</a>
+                            </li>
+                            <li>
+                                <a href="#submitted" >submitted</a>
+                            </li>
+                            <li>
+                                <a href="#successful_sign_in" >successful_sign_in</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isEmailValid" >isEmailValid</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openDialog" >openDialog</a>
+                            </li>
+                            <li>
+                                <a href="#submit" >submit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#f" >f</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dialog: MatDialog, settings: <a href="../injectables/CoreService.html" target="_self">CoreService</a>, authenticationService: <a href="../injectables/AuthenticationService.html" target="_self">AuthenticationService</a>, router: Router)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>settings</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CoreService.html" target="_self" >CoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authenticationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthenticationService.html" target="_self" >AuthenticationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isEmailValid"></a>
+                    <span class="name">
+                        <span ><b>isEmailValid</b></span>
+                        <a href="#isEmailValid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isEmailValid()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDialog"></a>
+                    <span class="name">
+                        <span ><b>openDialog</b></span>
+                        <a href="#openDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openDialog(enterAnimationDuration: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, exitAnimationDuration: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, dialogTitle: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, dialogText: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>enterAnimationDuration</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>exitAnimationDuration</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>dialogTitle</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>dialogText</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submit"></a>
+                    <span class="name">
+                        <span ><b>submit</b></span>
+                        <a href="#submit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="emailControl"></a>
+                    <span class="name">
+                        <span ><b>emailControl</b></span>
+                        <a href="#emailControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [
+    Validators.required,
+    Validators.pattern(EMAIL_REGEX),
+  ])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="error"></a>
+                    <span class="name">
+                        <span ><b>error</b></span>
+                        <a href="#error"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="form"></a>
+                    <span class="name">
+                        <span ><b>form</b></span>
+                        <a href="#form"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="options"></a>
+                    <span class="name">
+                        <span ><b>options</b></span>
+                        <a href="#options"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.settings.getOptions()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitted"></a>
+                    <span class="name">
+                        <span ><b>submitted</b></span>
+                        <a href="#submitted"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="successful_sign_in"></a>
+                    <span class="name">
+                        <span ><b>successful_sign_in</b></span>
+                        <a href="#successful_sign_in"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="f"></a>
+                        <span class="name"><b>f</b><a href="#f"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>f()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/pages/authentication/side-register/side-register.component.ts:84</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject } from &#x27;@angular/core&#x27;;
+import { CoreService } from &#x27;src/app/_services/core.service&#x27;;
+import { FormGroup, FormControl, Validators } from &#x27;@angular/forms&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { AuthenticationService } from &#x27;src/app/_services/authentication.service&#x27;;
+import { environment } from &#x27;src/environments/environment&#x27;;
+import {
+  MatDialog,
+  MatDialogRef,
+  MatDialogModule,
+} from &#x27;@angular/material/dialog&#x27;;
+import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
+import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
+
+const EMAIL_REGEX &#x3D; /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+export interface DialogData {
+  title: string;
+  text: string;
+}
+
+@Component({
+  selector: &#x27;app-side-register&#x27;,
+  templateUrl: &#x27;./side-register.component.html&#x27;,
+})
+export class AppSideRegisterComponent {
+  options &#x3D; this.settings.getOptions();
+  form!: FormGroup;
+  loading &#x3D; false;
+  submitted &#x3D; false;
+  error &#x3D; &#x27;&#x27;;
+  successful_sign_in &#x3D; false;
+
+  emailControl &#x3D; new FormControl(&#x27;&#x27;, [
+    Validators.required,
+    Validators.pattern(EMAIL_REGEX),
+  ]);
+
+  constructor(
+    public dialog: MatDialog,
+    private settings: CoreService,
+    private authenticationService: AuthenticationService,
+    private router: Router,
+  ) {}
+
+  ngOnInit() {
+    this.form &#x3D; new FormGroup({
+      fullName: new FormControl(&#x27;&#x27;, [Validators.required]),
+      email: this.emailControl, // Use the emailControl for email field
+    });
+  }
+
+  // Add a method to check if the email format is valid
+  isEmailValid(): boolean {
+    return this.emailControl.valid;
+  }
+
+  openDialog(
+    enterAnimationDuration: string,
+    exitAnimationDuration: string,
+    dialogTitle: string,
+    dialogText: string,
+  ): void {
+    const dialogRef &#x3D; this.dialog.open(DialogAnimationsExampleDialog, {
+      width: &#x27;250px&#x27;,
+      data: { title: dialogTitle, text: dialogText },
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (this.successful_sign_in) {
+        if (sessionStorage.getItem(&#x27;hasCompany&#x27;) &#x3D;&#x3D;&#x3D; &#x27;true&#x27;) {
+          this.router.navigate([&#x27;/dashboards/dashboard1&#x27;]);
+        } else {
+          this.router.navigate([&#x27;/theme-pages/company-management&#x27;]);
+        }
+      } else {
+        this.router.navigate([&#x27;/authentication/side-login&#x27;]);
+      }
+    });
+  }
+
+  get f() {
+    return this.form.controls;
+  }
+
+  submit() {
+    this.submitted &#x3D; true;
+    this.error &#x3D; &#x27;&#x27;;
+    this.loading &#x3D; true;
+
+    // Call the registerV2 API method with the provided fullName and email
+    this.authenticationService
+      .registerV2(
+        this.form.get(&#x27;fullName&#x27;)!.value,
+        this.form.get(&#x27;email&#x27;)!.value,
+      )
+      .subscribe(
+        (response) &#x3D;&gt; {
+          this.submitted &#x3D; false;
+          this.openDialog(
+            &#x27;0ms&#x27;,
+            &#x27;0ms&#x27;,
+            &#x27;Verify Your Email Address&#x27;,
+            &quot;Welcome to IDentify, we&#x27;ve sent you an email to verify your account and set your password. Once this is done you will be redirected to our sign in page!&quot;,
+          );
+        },
+        (error) &#x3D;&gt; {
+          if (error.status &#x3D;&#x3D; 500) {
+            this.openDialog(
+              &#x27;0ms&#x27;,
+              &#x27;0ms&#x27;,
+              &#x27;Invalid Sign Up&#x27;,
+              &#x27;Email account already in use, redirecting you to the login page.&#x27;,
+            );
+            this.submitted &#x3D; false;
+          } else {
+            this.openDialog(
+              &#x27;0ms&#x27;,
+              &#x27;0ms&#x27;,
+              &#x27;Failed Sign Up&#x27;,
+              &#x27;We couldn not sign you up at this time, please try again later.&#x27;,
+            );
+          }
+          console.error(&#x27;Registration error:&#x27;, error);
+          // Handle any error that occurs during the registration process
+        },
+      );
+  }
+}
+
+@Component({
+  selector: &#x27;register-dialog&#x27;,
+  templateUrl: &#x27;register-dialog.html&#x27;,
+  standalone: true,
+  imports: [MatDialogModule, MatButtonModule],
+})
+export class DialogAnimationsExampleDialog {
+  constructor(
+    public dialogRef: MatDialogRef&lt;DialogAnimationsExampleDialog&gt;,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+  ) {}
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;blank-layout-container justify-content-center&quot;&gt;
+  &lt;div class&#x3D;&quot;position-relative row w-100 h-100&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-7 col-xl-8 bg-gredient p-0&quot;&gt;
+      &lt;div
+        class&#x3D;&quot;p-24 h-100&quot;
+        style&#x3D;&quot;
+          background-image: url(&amp;quot;./assets/images/backgrounds/aleks-dahlberg-sandfly-bay-nz-left.jpg&amp;quot;);
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        &quot;
+      &gt;
+        &lt;a *ngIf&#x3D;&quot;options.theme &#x3D;&#x3D;&#x3D; &#x27;light&#x27;&quot;&gt;
+          &lt;img
+            src&#x3D;&quot;./assets/images/logos/IDentifyLogo.svg&quot;
+            class&#x3D;&quot;align-middle m-2&quot;
+            alt&#x3D;&quot;logo&quot;
+            width&#x3D;&quot;210&quot;
+            height&#x3D;&quot;52&quot;
+          /&gt;
+        &lt;/a&gt;
+        &lt;a *ngIf&#x3D;&quot;options.theme &#x3D;&#x3D;&#x3D; &#x27;dark&#x27;&quot;&gt;
+          &lt;img
+            src&#x3D;&quot;./assets/images/logos/IDentifyLogo.svg&quot;
+            class&#x3D;&quot;align-middle m-2&quot;
+            alt&#x3D;&quot;logo&quot;
+            width&#x3D;&quot;210&quot;
+            height&#x3D;&quot;52&quot;
+          /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-lg-5 col-xl-4 p-0&quot;&gt;
+      &lt;div
+        class&#x3D;&quot;p-32 d-flex align-items-start align-items-lg-center justify-content-center h-100&quot;
+      &gt;
+        &lt;div class&#x3D;&quot;row justify-content-center w-100&quot;&gt;
+          &lt;div class&#x3D;&quot;col-lg-9 max-width-form&quot;&gt;
+            &lt;h4 class&#x3D;&quot;f-w-700 f-s-24 m-0&quot;&gt;Welcome to IDentify&lt;/h4&gt;
+            &lt;span class&#x3D;&quot;f-s-14 d-block mat-body-1 m-t-8&quot;
+              &gt;Your Admin Dashboard&lt;/span
+            &gt;
+            &lt;form class&#x3D;&quot;m-t-30&quot; [formGroup]&#x3D;&quot;form&quot; (ngSubmit)&#x3D;&quot;submit()&quot;&gt;
+              &lt;mat-label class&#x3D;&quot;mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block&quot;
+                &gt;Full Name&lt;/mat-label
+              &gt;
+              &lt;mat-form-field
+                appearance&#x3D;&quot;outline&quot;
+                class&#x3D;&quot;w-100&quot;
+                color&#x3D;&quot;primary&quot;
+              &gt;
+                &lt;input matInput type&#x3D;&quot;fullName&quot; formControlName&#x3D;&quot;fullName&quot; /&gt;
+                &lt;mat-hint
+                  *ngIf&#x3D;&quot;f[&#x27;fullName&#x27;].touched &amp;&amp; f[&#x27;fullName&#x27;].invalid&quot;
+                  class&#x3D;&quot;m-b-16 error-msg&quot;
+                &gt;
+                  &lt;div
+                    class&#x3D;&quot;text-error&quot;
+                    *ngIf&#x3D;&quot;
+                      f[&#x27;fullName&#x27;].errors &amp;&amp; f[&#x27;fullName&#x27;].errors[&#x27;required&#x27;]
+                    &quot;
+                  &gt;
+                    Full Name is required.
+                  &lt;/div&gt;
+                &lt;/mat-hint&gt;
+              &lt;/mat-form-field&gt;
+              &lt;!-- email --&gt;
+              &lt;mat-label class&#x3D;&quot;mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block&quot;
+                &gt;Email Address&lt;/mat-label
+              &gt;
+              &lt;mat-form-field
+                appearance&#x3D;&quot;outline&quot;
+                class&#x3D;&quot;w-100&quot;
+                color&#x3D;&quot;primary&quot;
+              &gt;
+                &lt;input matInput type&#x3D;&quot;email&quot; formControlName&#x3D;&quot;email&quot; /&gt;
+                &lt;mat-hint
+                  *ngIf&#x3D;&quot;f[&#x27;email&#x27;].touched &amp;&amp; f[&#x27;email&#x27;].invalid&quot;
+                  class&#x3D;&quot;m-b-16 error-msg&quot;
+                &gt;
+                  &lt;div
+                    class&#x3D;&quot;text-error&quot;
+                    *ngIf&#x3D;&quot;f[&#x27;email&#x27;].errors &amp;&amp; f[&#x27;email&#x27;].errors[&#x27;required&#x27;]&quot;
+                  &gt;
+                    Email is required.
+                  &lt;/div&gt;
+                  &lt;div
+                    class&#x3D;&quot;text-error&quot;
+                    *ngIf&#x3D;&quot;f[&#x27;email&#x27;].errors &amp;&amp; f[&#x27;email&#x27;].errors[&#x27;pattern&#x27;]&quot;
+                  &gt;
+                    Invalid email format.
+                  &lt;/div&gt;
+                &lt;/mat-hint&gt;
+              &lt;/mat-form-field&gt;
+
+              &lt;button
+                mat-flat-button
+                color&#x3D;&quot;primary&quot;
+                class&#x3D;&quot;w-100&quot;
+                [disabled]&#x3D;&quot;!form.valid || submitted&quot;
+              &gt;
+                Sign Up
+              &lt;/button&gt;
+
+              &lt;div&gt;
+                &lt;mat-progress-bar
+                  mode&#x3D;&quot;query&quot;
+                  *ngIf&#x3D;&quot;submitted&quot;
+                &gt;&lt;/mat-progress-bar&gt;
+              &lt;/div&gt;
+
+              &lt;!-- input --&gt;
+            &lt;/form&gt;
+            &lt;span class&#x3D;&quot;d-block f-w-500 d-block m-t-24&quot;
+              &gt;Already have an Account?
+
+              &lt;a
+                [routerLink]&#x3D;&quot;[&#x27;/authentication/side-login&#x27;]&quot;
+                class&#x3D;&quot;text-decoration-none text-primary f-w-500 f-s-14&quot;
+              &gt;
+                Sign In&lt;/a
+              &gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="blank-layout-container justify-content-center">  <div class="position-relative row w-100 h-100">    <div class="col-lg-7 col-xl-8 bg-gredient p-0">      <div        class="p-24 h-100"        style="          background-image: url(&quot;./assets/images/backgrounds/aleks-dahlberg-sandfly-bay-nz-left.jpg&quot;);          background-size: 100% 100%;          background-repeat: no-repeat;        "      >        <a *ngIf="options.theme === \'light\'">          <img            src="./assets/images/logos/IDentifyLogo.svg"            class="align-middle m-2"            alt="logo"            width="210"            height="52"          />        </a>        <a *ngIf="options.theme === \'dark\'">          <img            src="./assets/images/logos/IDentifyLogo.svg"            class="align-middle m-2"            alt="logo"            width="210"            height="52"          />        </a>      </div>    </div>    <div class="col-lg-5 col-xl-4 p-0">      <div        class="p-32 d-flex align-items-start align-items-lg-center justify-content-center h-100"      >        <div class="row justify-content-center w-100">          <div class="col-lg-9 max-width-form">            <h4 class="f-w-700 f-s-24 m-0">Welcome to IDentify</h4>            <span class="f-s-14 d-block mat-body-1 m-t-8"              >Your Admin Dashboard</span            >            <form class="m-t-30" [formGroup]="form" (ngSubmit)="submit()">              <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"                >Full Name</mat-label              >              <mat-form-field                appearance="outline"                class="w-100"                color="primary"              >                <input matInput type="fullName" formControlName="fullName" />                <mat-hint                  *ngIf="f[\'fullName\'].touched && f[\'fullName\'].invalid"                  class="m-b-16 error-msg"                >                  <div                    class="text-error"                    *ngIf="                      f[\'fullName\'].errors && f[\'fullName\'].errors[\'required\']                    "                  >                    Full Name is required.                  </div>                </mat-hint>              </mat-form-field>              <!-- email -->              <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"                >Email Address</mat-label              >              <mat-form-field                appearance="outline"                class="w-100"                color="primary"              >                <input matInput type="email" formControlName="email" />                <mat-hint                  *ngIf="f[\'email\'].touched && f[\'email\'].invalid"                  class="m-b-16 error-msg"                >                  <div                    class="text-error"                    *ngIf="f[\'email\'].errors && f[\'email\'].errors[\'required\']"                  >                    Email is required.                  </div>                  <div                    class="text-error"                    *ngIf="f[\'email\'].errors && f[\'email\'].errors[\'pattern\']"                  >                    Invalid email format.                  </div>                </mat-hint>              </mat-form-field>              <button                mat-flat-button                color="primary"                class="w-100"                [disabled]="!form.valid || submitted"              >                Sign Up              </button>              <div>                <mat-progress-bar                  mode="query"                  *ngIf="submitted"                ></mat-progress-bar>              </div>              <!-- input -->            </form>            <span class="d-block f-w-500 d-block m-t-24"              >Already have an Account?              <a                [routerLink]="[\'/authentication/side-login\']"                class="text-decoration-none text-primary f-w-500 f-s-14"              >                Sign In</a              >            </span>          </div>        </div>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountSettingComponent', 'selector': 'app-account-setting'},{'name': 'AddUserDialogComponent', 'selector': 'app-add-user-dialog'},{'name': 'AppAccountSettingsRedirectComponent', 'selector': 'app-account-settings'},{'name': 'AppBoxedForgotPasswordComponent', 'selector': 'app-boxed-forgot-password'},{'name': 'AppBoxedLoginComponent', 'selector': 'app-boxed-login'},{'name': 'AppBoxedRegisterComponent', 'selector': 'app-boxed-register'},{'name': 'AppBoxedTwoStepsComponent', 'selector': 'app-boxed-two-steps'},{'name': 'AppBreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'AppCompanyManagementRedirectComponent', 'selector': 'app-company-management'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDashboard1Component', 'selector': 'app-dashboard1'},{'name': 'AppErrorComponent', 'selector': 'app-error'},{'name': 'AppFormManagementRedirectComponent', 'selector': 'app-form-management'},{'name': 'AppHorizontalHeaderComponent', 'selector': 'app-horizontal-header'},{'name': 'AppHorizontalNavItemComponent', 'selector': 'app-horizontal-nav-item'},{'name': 'AppHorizontalSearchDialogComponent', 'selector': 'app-search-dialog'},{'name': 'AppHorizontalSidebarComponent', 'selector': 'app-horizontal-sidebar'},{'name': 'AppLandingpageComponent', 'selector': 'app-landingpage'},{'name': 'AppMaintenanceComponent', 'selector': 'app-maintenance'},{'name': 'AppMixTableComponent', 'selector': 'app-mix-table'},{'name': 'AppNavItemComponent', 'selector': 'app-nav-item'},{'name': 'AppQRCodeGenerationRedirectComponent', 'selector': 'app-qr-redirect-component'},{'name': 'AppScanHistoryRedirectWidget', 'selector': 'app-scan-history-component'},{'name': 'AppScanIdComponent', 'selector': 'app-scan-id'},{'name': 'AppScanIdRedirectComponent', 'selector': 'app-redirect-id'},{'name': 'AppSideForgotPasswordComponent', 'selector': 'app-side-forgot-password'},{'name': 'AppSideLoginComponent', 'selector': 'app-side-login'},{'name': 'AppSideRegisterComponent', 'selector': 'app-side-register'},{'name': 'AppSideTwoStepsComponent', 'selector': 'app-side-two-steps'},{'name': 'BlankComponent', 'selector': 'app-blank'},{'name': 'BrandingComponent', 'selector': 'app-branding'},{'name': 'CheckingIpsDialogComponent', 'selector': 'app-checking-ips-dialog'},{'name': 'CollectionPointComponent', 'selector': 'app-collection-point'},{'name': 'CollectionPointDeleteDialog', 'selector': 'delete-point-dialog'},{'name': 'CommonScanIdComponent', 'selector': 'app-common-scan-id'},{'name': 'CompanyManagementComponent', 'selector': 'app-company-management'},{'name': 'ConsentDialogComponent', 'selector': 'app-consent-dialog'},{'name': 'CreateCompanyComponent', 'selector': 'app-create-company'},{'name': 'CreateNewFormDialogComponent', 'selector': 'app-create-new-form-dialog'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DeactivatedCollectionPointDialogComponent', 'selector': 'app-deactivated-collection-point-dialog'},{'name': 'DeleteFormDialogComponent', 'selector': 'app-delete-form-dialog'},{'name': 'DesktopQrCodeScanIdComponent', 'selector': 'desktop-qr-code-scan-id'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'dialog-dialog'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'register-dialog'},{'name': 'ExpandDataModalMobileComponent', 'selector': 'app-expanded-data-modal'},{'name': 'ExpandedDataModalComponent', 'selector': 'app-expanded-data-modal'},{'name': 'FailedJobsDialogComponent', 'selector': 'app-failed-jobs-dialog'},{'name': 'FormDialogComponent', 'selector': 'app-expanded-form-dialog'},{'name': 'FormManagementComponent', 'selector': 'app-form-management'},{'name': 'FormsTableComponent', 'selector': 'app-forms-table'},{'name': 'FullComponent', 'selector': 'app-full'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HowDoesThisWorkDialogComponent', 'selector': 'app-how-does-this-work-dialog'},{'name': 'HowItWorksComponent', 'selector': 'app-how-it-works'},{'name': 'InviteUsersComponent', 'selector': 'app-invite-users'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'NoCollectionPointsDialogComponent', 'selector': 'app-no-collection-points-dialog'},{'name': 'RedirectDialogComponent', 'selector': 'app-redirect-dialog'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TimeoutDialogComponent', 'selector': 'app-timeout-dialog'},{'name': 'UpdateEmailDialogComponent', 'selector': 'app-update-email-dialog'},{'name': 'UpdateFormDialogComponent', 'selector': 'app-update-form-dialog'},{'name': 'UpdatePasswordDialogComponent', 'selector': 'app-update-password-dialog'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViewUsersComponent', 'selector': 'app-view-users'},{'name': 'WelcomeDialogComponent', 'selector': 'app-welcome-dialog'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AppSideRegisterComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppSideRegisterComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

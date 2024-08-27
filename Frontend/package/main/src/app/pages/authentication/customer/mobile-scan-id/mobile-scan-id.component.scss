@@ -1,0 +1,109 @@
+/* Add this style to your global CSS or component CSS file */
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px; /* Adjust the max-width as needed */
+  margin: auto;
+  padding: 20px; /* Add padding */
+  border-radius: 30px; /* Add rounded edges */
+}
+
+/* If you don't want the image to exceed the max-width, you can add this */
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  padding: 20px; /* Add padding */
+  border-radius: 30px; /* Add rounded edges */
+}
+
+.centered-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px; /* Adjust the margin as needed to create space between the content and the SVG */
+}
+
+.centered-svg img {
+  max-width: 120px; /* Adjust the max-width to control the size of the SVG */
+  max-height: 120px; /* Adjust the max-height to control the size of the SVG */
+}
+
+/* Add these styles to your component's stylesheet */
+
+.header-container {
+  display: flex;
+  justify-content: flex-start; /* Align items horizontally to the left */
+  align-items: center; /* Center items vertically */
+}
+
+.logo {
+  max-width: 150px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+  margin-left: 8px; /* Add some left margin to the logo */
+}
+
+.card-container {
+  margin-top: 16px; /* Add some space between the header and card */
+}
+.title-text-center {
+  text-align: center;
+  font-size: xx-large;
+  padding-bottom: 10px; /* Add padding below the title */
+}
+.subtitle-text-center {
+  text-align: center;
+  font-size: larger;
+}
+
+/* You can adjust the following styles to your preference */
+.image-wrapper {
+  text-align: center;
+}
+
+/*
+IMPORTANT
+below styling controls where the card is and its size, play with it to fit
+*/
+
+.card-container {
+  height: auto;
+  display: flex; /* Use flexbox to expand the card container */
+  align-items: center; /* Vertically center the card content */
+  justify-content: center; /* Horizontally center the card content */
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    height: auto; /* Allow the card to expand its height based on content */
+  }
+
+  .cardWithShadow {
+    max-width: 100%; /* Take full width on smaller screens */
+  }
+
+  /* Add more styles as needed for smaller screens */
+}
+
+.cardWithShadow {
+  flex: 1; /* Allow the card to grow to fill available space */
+  max-width: 600px; /* Optionally limit the card's width */
+}
+
+.how-does-it-work-link {
+  text-align: center;
+  margin-top: 20px; /* Add some spacing above the link */
+}
+
+.how-does-it-work-link a {
+  color: #007bff; /* Set link color */
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold; /* Make the link text bold */
+}
+
+.how-does-it-work-link a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Other styles as needed */

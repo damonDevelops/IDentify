@@ -1,0 +1,33 @@
+<mat-card-content class="p-y-24 b-t-1">
+  <div class="row">
+    <div class="col-12">
+      <mat-card class="cardWithShadow">
+        <mat-card-content class="p-y-24">
+          <mat-card-title>Invite Users</mat-card-title>
+          <mat-card-subtitle class="mat-body-1"
+            >To invite users, add their email address below</mat-card-subtitle
+          >
+          <form class="m-t-24">
+            <mat-form-field appearance="outline" class="w-100" color="primary">
+              <mat-label>Email</mat-label>
+              <input matInput [formControl]="emailControl" />
+              <mat-error *ngIf="emailControl.hasError('pattern')"
+                >Invalid email format</mat-error
+              >
+            </mat-form-field>
+          </form>
+          <div class="text-right p-24 p-t-0">
+            <button
+              mat-flat-button
+              color="primary"
+              [disabled]="!emailControl.valid"
+              (click)="inviteUser()"
+            >
+              Invite User
+            </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</mat-card-content>

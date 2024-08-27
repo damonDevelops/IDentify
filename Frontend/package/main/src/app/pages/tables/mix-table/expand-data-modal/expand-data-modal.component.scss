@@ -1,0 +1,11 @@
+.property-values,
+.property-values-single {
+  display: flex;
+  gap: 10px;
+}
+
+.property-values mat-form-field,
+.property-values-single mat-form-field {
+  flex-grow: 1;
+  width: 100%;
+}

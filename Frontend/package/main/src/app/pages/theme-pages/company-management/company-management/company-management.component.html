@@ -1,0 +1,18 @@
+<mat-card class="cardWithShadow">
+  <mat-card-content class="p-0">
+    <mat-tab-group mat-stretch-tabs="false" animationDuration="0ms">
+      <mat-tab label="Create Company">
+        <app-create-company></app-create-company>
+      </mat-tab>
+      <mat-tab label="Invite Users" *ngIf="hasCompany && editCompany">
+        <app-invite-users></app-invite-users>
+      </mat-tab>
+      <mat-tab label="View Users" *ngIf="hasCompany && editCompany">
+        <app-view-users></app-view-users>
+      </mat-tab>
+      <mat-tab label="Collection Points" *ngIf="hasCompany && editCompany">
+        <app-collection-point></app-collection-point>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>

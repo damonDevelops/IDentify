@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15.2
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: Dev123!
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - "./postgres:/docker-entrypoint-initdb.d"
+    ports:
+      - "5432:5432"
+  rabbit:
+    image: rabbitmq:management
+    volumes:
+      - ./rabbitmq_local/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./rabbitmq/enabled_plugins:/etc/rabbitmq/enabled_plugins
+    ports:
+      - "15672:15672"
+      - "1883:1883"
+      - "5672:5672"
+  mock_ips:
+    image: git.identify.rodeo/batesy/mock_ips:2
+    network_mode: host
+    pull_policy: always
+    environment:
+      API_URL: http://localhost:8080
+      API_USERNAME: ips_server
+      API_PASSWORD: ips
+  fakesmtp:
+    image: gessnerfl/fake-smtp-server:latest
+    ports:
+      - "8050:8080" # web interface
+      - "8025:8025" # smtp
+
+volumes:
+  postgres_data:
+  keyfiles:

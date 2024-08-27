@@ -1,0 +1,128 @@
+<div
+  autosize
+  autoFocus
+  [ngClass]="{
+    'sidebarNav-mini': options.sidenavCollapsed && options.navPos !== 'top',
+    'sidebarNav-horizontal': options.horizontal,
+    cardBorder: options.cardBorder,
+    orange_theme: options.activeTheme == 'orange_theme',
+    blue_theme: options.activeTheme == 'blue_theme',
+    aqua_theme: options.activeTheme == 'aqua_theme',
+    purple_theme: options.activeTheme == 'purple_theme',
+    green_theme: options.activeTheme == 'green_theme',
+    cyan_theme: options.activeTheme == 'cyan_theme'
+  }"
+  [dir]="options.dir!"
+>
+  <!-- ============================================================== -->
+  <!-- VerticalHeader -->
+  <!-- ============================================================== -->
+  <ng-container *ngIf="!options.horizontal; else horizontalheader">
+    <app-header
+      [showToggle]="!isOver"
+      (toggleCollapsed)="toggleCollapsed()"
+      (toggleMobileNav)="sidenav.toggle()"
+    ></app-header>
+  </ng-container>
+
+  <!-- horizontal header -->
+  <ng-template #horizontalheader>
+    <app-horizontal-header
+      (toggleMobileNav)="sidenav.toggle()"
+    ></app-horizontal-header>
+  </ng-template>
+
+  <mat-sidenav-container class="mainWrapper">
+    <!-- ============================================================== -->
+    <!-- Vertical Sidebar -->
+    <!-- ============================================================== -->
+
+    <mat-sidenav
+      #leftsidenav
+      [mode]="isOver ? 'over' : 'side'"
+      [opened]="options.navPos === 'side' && options.sidenavOpened && !isOver"
+      *ngIf="!options.horizontal && filteredNavItems.length > 0"
+      (openedChange)="onSidenavOpenedChange($event)"
+      (closedStart)="onSidenavClosedStart()"
+      class="sidebarNav"
+    >
+      <ng-scrollbar
+        class="position-relative mini-scroll"
+        style="height: calc(100vh - 230px)"
+      >
+        <mat-nav-list class="sidebar-list" id="step3">
+          <ng-container *ngFor="let item of filteredNavItems">
+            <app-nav-item
+              [item]="item"
+              (notify)="sidenav.toggle()"
+            ></app-nav-item>
+          </ng-container>
+        </mat-nav-list>
+      </ng-scrollbar>
+    </mat-sidenav>
+    <!-- ============================================================== -->
+    <!-- horizontal Sidebar -->
+    <!-- ============================================================== -->
+    <mat-sidenav
+      #leftsidenav
+      [mode]="isOver ? 'over' : 'side'"
+      [opened]="
+        options.navPos === 'side' &&
+        options.sidenavOpened &&
+        !isOver &&
+        !options.horizontal
+      "
+      *ngIf="options.horizontal"
+      (openedChange)="onSidenavOpenedChange($event)"
+      (closedStart)="onSidenavClosedStart()"
+      class="sidebarNav"
+    >
+      <app-sidebar> </app-sidebar>
+      <ng-scrollbar
+        class="position-relative mini-scroll"
+        style="height: calc(100vh - 230px)"
+      >
+        <mat-nav-list class="sidebar-list">
+          <app-nav-item
+            *ngFor="let item of navItems"
+            [item]="item"
+            (notify)="sidenav.toggle()"
+          >
+          </app-nav-item>
+        </mat-nav-list>
+      </ng-scrollbar>
+    </mat-sidenav>
+    <!-- ============================================================== -->
+    <!-- Main Content -->
+    <!-- ============================================================== -->
+    <mat-sidenav-content class="contentWrapper">
+      <app-horizontal-sidebar
+        *ngIf="options.horizontal"
+      ></app-horizontal-sidebar>
+
+      <main
+        class="pageWrapper"
+        [ngClass]="{
+          maxWidth: options.boxed
+        }"
+      >
+        <app-breadcrumb></app-breadcrumb>
+        <!-- ============================================================== -->
+        <!-- Outlet -->
+        <!-- ============================================================== -->
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+    <!-- ============================================================== -->
+    <!-- Customizer -->
+    <!-- ============================================================== -->
+    <mat-sidenav
+      #customizerRight
+      mode="over"
+      position="end"
+      class="fixed-customizer"
+    >
+      <app-customizer (optionsChange)="receiveOptions($event)"></app-customizer>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>

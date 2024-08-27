@@ -1,0 +1,10 @@
+.how-does-it-work-link a {
+  color: #007bff; /* Set link color */
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold; /* Make the link text bold */
+}
+
+.how-does-it-work-link a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  cursor: pointer;
+}

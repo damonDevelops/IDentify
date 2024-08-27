@@ -1,0 +1,13 @@
+{
+    "build": { "dockerfile": "Dockerfile" },
+
+    "customizations": {
+      "vscode": {
+        "extensions": ["johnpapa.angular-essentials"]
+      }
+    },
+    "forwardPorts": [4200],
+    "remoteEnv": {
+      "GIT_SSH_COMMAND": "ssh -i ~/.git/idrsa"
+  }
+}

@@ -1,0 +1,45 @@
+<mat-card-content class="p-y-24 b-t-1">
+  <div class="row">
+    <div class="col-12">
+      <mat-card class="b-1 shadow-none">
+        <mat-card-content class="p-y-24">
+          <mat-card-title>View Users</mat-card-title>
+          <mat-card-subtitle class="mat-body-1"
+            >To view a user, expand them to view full
+            information.</mat-card-subtitle
+          >
+
+          <ng-container *ngFor="let user of users">
+            <mat-expansion-panel
+              class="cardWithShadow"
+              [expanded]="expandedUserIds.includes(user.id)"
+              (expandedChange)="setExpandedUser(user.id)"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title class="f-w-600 mat-body-1">
+                  {{ user.email }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-card-content>
+                <div>
+                  <p>
+                    <strong>Email:</strong>
+                    {{ user.email }}
+                  </p>
+                  <p>
+                    <strong>Creation Date:</strong>
+                    {{ user.creationDate | date: "dd/MM/yyyy" }}
+                  </p>
+                  <p>
+                    <strong>Last Seen:</strong>
+                    {{ user.lastSeen | date: "dd/MM/yyyy" }}
+                  </p>
+                </div>
+              </mat-card-content>
+            </mat-expansion-panel>
+          </ng-container>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</mat-card-content>

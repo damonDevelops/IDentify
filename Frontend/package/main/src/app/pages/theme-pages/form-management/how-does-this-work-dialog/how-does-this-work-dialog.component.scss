@@ -1,0 +1,13 @@
+.right-align-buttons {
+  text-align: right;
+}
+
+.custom-button {
+  background-color: #006064; /* Set your desired default background color */
+  color: #ffffff; /* Set your desired default text color */
+  margin-right: 10px; /* Add margin to create a gap between buttons */
+}
+
+.custom-button:hover {
+  background-color: #007c89; /* Set your desired hover background color */
+}

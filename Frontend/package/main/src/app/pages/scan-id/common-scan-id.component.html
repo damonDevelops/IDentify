@@ -1,0 +1,6 @@
+<ng-container *ngIf="isMobile; else desktopComponent">
+  <app-mobile-scan-id></app-mobile-scan-id>
+</ng-container>
+<ng-template #desktopComponent>
+  <app-scan-id></app-scan-id>
+</ng-template>

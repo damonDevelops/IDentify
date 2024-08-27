@@ -1,0 +1,517 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IDentify Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">IDentify Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Interfaces</li>
+  <li class="breadcrumb-item"
+  >
+  ApiResponse</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/pages/scan-id/mobile-scan-id/mobile-scan-id.component.ts</code>
+        </p>
+
+
+
+
+        <section data-compodoc="block-index">
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#jobId" 
+>
+                                            jobId
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section data-compodoc="block-properties">
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="jobId"></a>
+                                        <span class="name "><b>jobId</b>
+                                            <a href="#jobId">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>jobId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ElementRef, ViewChild } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { environment } from &#x27;src/environments/environment&#x27;;
+import { Input } from &#x27;@angular/core&#x27;;
+import { Subject, Subscription, finalize, interval } from &#x27;rxjs&#x27;;
+import { takeUntil, takeWhile } from &#x27;rxjs/operators&#x27;;
+import { MatDialog, MatDialogRef } from &#x27;@angular/material/dialog&#x27;;
+
+import { ApiService } from &#x27;src/app/_services/api/api.service&#x27;;
+import { TimeoutDialogComponent } from &#x27;src/app/shared/components/timeout-dialog/timeout-dialog.component&#x27;;
+import { CheckingIpsDialogComponent } from &#x27;src/app/shared/components/checking-ips-dialog/checking-ips-dialog.component&#x27;;
+import { RedirectDialogComponent } from &#x27;src/app/shared/components/redirect-dialog/redirect-dialog.component&#x27;;
+import { ExpandDataModalMobileComponent } from &#x27;src/app/shared/expand-data-modal-mobile/expand-data-modal-mobile.component&#x27;;
+import { CompanyServiceService } from &#x27;src/app/_services/company/company-service.service&#x27;;
+@Component({
+  selector: &#x27;app-mobile-scan-id&#x27;,
+  templateUrl: &#x27;./mobile-scan-id.component.html&#x27;,
+  styleUrls: [&#x27;./mobile-scan-id.component.scss&#x27;],
+})
+export class MobileScanIdComponent {
+  srcResult: any;
+  fileName &#x3D; &#x27;&#x27;;
+  uploadProgress: number | null;
+  uploadSub: Subscription | null;
+  returnVal: any;
+  imageSrc &#x3D; &#x27;./assets/images/svgs/id-card.svg&#x27;;
+  file: any;
+  isValid &#x3D; false;
+  selectedCollectionPoint: any; // Add this variable to store the selected collection point
+  collectionPoints: any[] &#x3D; []; // Initialize collectionPoints array
+  imagePreviews: string[] &#x3D; [];
+  @ViewChild(&#x27;uploadedImage&#x27;) uploadedImage: ElementRef;
+
+  isUploadDisabled &#x3D; false;
+  isSubmitDisabled &#x3D; true;
+  isRemoveDisabled &#x3D; true;
+
+  private ngUnsubscribe &#x3D; new Subject&lt;void&gt;();
+
+  @Input()
+  requiredFileType: string;
+
+  individualCardData: any;
+  cardProperties: any[] &#x3D; []; // Array to store processed properties
+
+  constructor(
+    private apiService: ApiService,
+    private http: HttpClient,
+    public dialog: MatDialog,
+    public redirectDialog: MatDialog,
+    public timeOutDialog: MatDialog,
+    private companyService: CompanyServiceService,
+  ) {}
+
+  ngOnInit() {
+    console.log(&quot;You&#x27;re viewing the mobile version&quot;);
+    this.fetchCollectionPoints();
+  }
+
+  fetchCollectionPoints(): void {
+    this.companyService
+      .getActiveCompany()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((activeCompany) &#x3D;&gt; {
+        if (activeCompany) {
+          // If there&#x27;s an active company, update the collection points here
+          this.apiService.fetchCollectionPointsNew(activeCompany.id).subscribe(
+            (response) &#x3D;&gt; {
+              this.collectionPoints &#x3D; response;
+            },
+            (error) &#x3D;&gt; {
+              // Handle error if needed
+            },
+          );
+        }
+      });
+  }
+
+  openDialog(
+    enterAnimationDuration: string,
+    exitAnimationDuration: string,
+  ): void {
+    this.dialog.open(CheckingIpsDialogComponent, {
+      width: &#x27;250px&#x27;,
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
+  closeDialog(): void {
+    this.dialog.closeAll();
+  }
+
+  openRedirectDialog(
+    enterAnimationDuration: string,
+    exitAnimationDuration: string,
+    totalImages: number,
+    successfulImagesCount: number,
+  ): void {
+    this.dialog
+      .open(RedirectDialogComponent, {
+        width: &#x27;250px&#x27;,
+        enterAnimationDuration,
+        exitAnimationDuration,
+        data: { totalImages, successfulImagesCount }, // Pass the data here
+      })
+      .afterClosed()
+      .subscribe(() &#x3D;&gt; {
+        // This code will be executed once the dialog is closed
+        this.closeDialog();
+        // Reload the page
+        this.reloadPage();
+      });
+  }
+
+  openTimeoutDialog(
+    enterAnimationDuration: string,
+    exitAnimationDuration: string,
+  ): void {
+    this.timeOutDialog
+      .open(TimeoutDialogComponent, {
+        width: &#x27;250px&#x27;,
+        enterAnimationDuration,
+        exitAnimationDuration,
+      })
+      .afterClosed()
+      .subscribe(() &#x3D;&gt; {
+        // This code will be executed once the dialog is closed
+        this.closeDialog();
+        // Reload the page
+        this.reloadPage();
+      });
+  }
+  reloadPage() {
+    window.location.reload();
+  }
+
+  onChangeFile(event: any) {
+    if (event.target.files.length &gt; 0) {
+      this.fileName &#x3D; event.target.files[0].name;
+      this.file &#x3D; event.target.files[0];
+
+      var reader &#x3D; new FileReader();
+      reader.readAsDataURL(this.file);
+      reader.onload &#x3D; (event: any) &#x3D;&gt; {
+        this.imagePreviews.push(event.target.result);
+        this.imageSrc &#x3D; event.target.result;
+        if (this.uploadedImage) {
+          this.uploadedImage.nativeElement.width &#x3D; 200;
+          this.uploadedImage.nativeElement.height &#x3D; 200;
+        }
+        this.isUploadDisabled &#x3D; true;
+        this.isSubmitDisabled &#x3D; false;
+        this.isRemoveDisabled &#x3D; false;
+      };
+    }
+  }
+
+  //this method needs to make a post request to the backend and then open up a dialog with a spinning wheel.
+  //every so often it will check the state of that job and if it is completed, the user is told, and given the option to go view results
+  processImage(event: any) {
+    console.log(this.selectedCollectionPoint);
+    this.openDialog(&#x27;0ms&#x27;, &#x27;0ms&#x27;);
+    const formData &#x3D; new FormData();
+    formData.append(&#x27;image&#x27;, this.file);
+
+    this.companyService
+      .getActiveCompany()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((activeCompany) &#x3D;&gt; {
+        if (activeCompany) {
+          this.apiService
+            .submitImage(
+              activeCompany.companyEndpoint,
+              this.selectedCollectionPoint.endpoint,
+              this.file,
+            )
+            .subscribe({
+              next: (data: ApiResponse) &#x3D;&gt; {
+                // Make GET requests every second for 20 seconds
+                const interval$ &#x3D; interval(1000);
+                let subscription: Subscription; // Create a Subscription object
+                let unsubscribeCalled &#x3D; false; // Flag to track if unsubscribe is called
+
+                subscription &#x3D; interval$
+                  .pipe(
+                    takeWhile((_, index) &#x3D;&gt; index &lt; 20),
+                    finalize(() &#x3D;&gt; {
+                      // This code block will be executed after the 20 seconds are up (observable completes).
+                      // Check if unsubscribe is not called, then execute the additional code.
+                      if (!unsubscribeCalled) {
+                        this.closeDialog();
+                        this.openTimeoutDialog(&#x27;0ms&#x27;, &#x27;0ms&#x27;);
+                      }
+                    }),
+                  )
+                  .subscribe(() &#x3D;&gt; {
+                    console.log(data.jobId);
+                    this.apiService.getJobState(data.jobId).subscribe({
+                      next: (completedData: NewApiResponse) &#x3D;&gt; {
+                        if (completedData.state &#x3D;&#x3D;&#x3D; &#x27;COMPLETE&#x27;) {
+                          //change this logic slightly to enable the user to edit the card information
+
+                          this.apiService
+                            .loadIndividualResult(data.jobId)
+                            .subscribe(
+                              (result) &#x3D;&gt; {
+                                this.individualCardData &#x3D; result;
+                                this.processCardProperties(); // Preprocess data
+
+                                const dialogRef &#x3D; this.dialog.open(
+                                  ExpandDataModalMobileComponent,
+                                  {
+                                    width: &#x27;400px&#x27;, // Adjust width as needed
+                                    data: {
+                                      individualCardData: result,
+                                      rowId: data.jobId,
+                                    },
+                                  },
+                                );
+
+                                dialogRef.afterClosed().subscribe(() &#x3D;&gt; {
+                                  // This code will be executed once the dialog is closed
+                                  this.closeDialog();
+                                  this.openRedirectDialog(&#x27;0ms&#x27;, &#x27;0ms&#x27;, 1, 1);
+                                  unsubscribeCalled &#x3D; true;
+                                  subscription.unsubscribe();
+                                });
+                              },
+                              (error) &#x3D;&gt; {
+                                console.error(
+                                  &quot;Couldn&#x27;t fetch individual card result: &quot; +
+                                    error,
+                                );
+                              },
+                            );
+                          // Unsubscribe to break out of the loop completely
+                          unsubscribeCalled &#x3D; true;
+                          subscription.unsubscribe();
+                        }
+                      },
+                      error: (error) &#x3D;&gt; {
+                        console.error(&#x27;Error while checking state: &#x27;, error);
+                        // Optionally handle error if needed
+                      },
+                    });
+                  });
+
+                // Optionally, you can show an initial message for debugging purposes
+                // alert(&quot;Image Processing started!\nJob ID: &quot; + data.jobId + &quot;\nWaiting for completion...&quot;);
+                // this.removeImage();
+
+                //add an open dialog for the one saying whether or not the processing was successful
+              },
+              error: (error) &#x3D;&gt; {
+                alert(
+                  &#x27;An error occurred, your image could not be processed at this time&#x27;,
+                );
+                console.error(&#x27;Error: &#x27;, error);
+              },
+            });
+        }
+      });
+  }
+
+  //localhost:8080/submit/RKD3/testPoint2
+  removeImage() {
+    this.imageSrc &#x3D; &#x27;./assets/images/svgs/id-card.svg&#x27;;
+    this.isUploadDisabled &#x3D; false;
+    this.isSubmitDisabled &#x3D; true;
+    this.isRemoveDisabled &#x3D; true;
+  }
+
+  processCardProperties(): void {
+    this.cardProperties &#x3D; [];
+
+    for (const [propertyName, propertyValue] of Object.entries(
+      this.individualCardData.cardData,
+    )) {
+      this.cardProperties.push({ name: propertyName, values: propertyValue });
+    }
+  }
+
+  displayPointName(point: any): string {
+    return point ? point.name : &#x27;&#x27;;
+  }
+
+  ngOnDestroy() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
+}
+
+interface ApiResponse {
+  jobId: string; // Replace &#x27;string&#x27; with the actual type of &#x27;state&#x27;
+  // Add other properties if the API response contains more data.
+}
+
+interface NewApiResponse {
+  state: string;
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'ApiResponse.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

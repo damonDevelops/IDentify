@@ -1,0 +1,67 @@
+<mat-stepper #stepper>
+  <mat-step>
+    <ng-template matStepLabel>Edit Your Form</ng-template>
+    <h2>Edit Your Form</h2>
+    <p>
+      To use the IDentify's form management, you'll need to provide a word
+      document (.docx) file. To have IDentify automatically fill in fields for
+      you, you'll need to edit your document to include the neccessary
+      information.
+    </p>
+    <p></p>
+    <h2>Values:</h2>
+    <ul>
+      <li>Name: &#123;name&#125;</li>
+      <li>Date of Birth: &#123;dob&#125;</li>
+      <li>Address: &#123;address&#125;</li>
+      <li>License Number: &#123;license_no&#125;</li>
+      <li>Card Number: &#123;card_number&#125;</li>
+    </ul>
+    <h2>Example:</h2>
+    <p>
+      For an example Word document,
+      <a
+        href="../../../../../assets/documents/Example Identify Form.docx"
+        download="Example Identify Form.docx"
+        target="_blank"
+        >click here</a
+      >
+    </p>
+    <div class="right-align-buttons">
+      <button mat-button matStepperNext class="custom-button">Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Upload Your Document</ng-template>
+    <h2>Upload Your Document</h2>
+    <p>
+      Select 'Create New Form'. You'll be able to provide a form name, this is
+      important as it is what will show up when you wish to use this form in
+      future use. Name the form, then select the 'Upload Word Document Button'.
+      Select the form you just edited which contains fields IDentify can
+      recognise, then press create.
+    </p>
+    <div class="right-align-buttons">
+      <button mat-button matStepperPrevious class="custom-button">Back</button>
+      <button mat-button matStepperNext class="custom-button">Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Use Your Form for Any Customer</ng-template>
+    <h2>Using Your Form</h2>
+    <p>
+      To use any uploaded form for a new or existing customer, simply head to
+      'Scan History', select the collection point your customer is saved within,
+      find the customer by using the search bar and click on the 'Select Form'
+      button. Select the form you wish to use in the dropdown menu, and select
+      whether you wish to save the customer filled in form as a PDF or as a Word
+      Document
+    </p>
+    <div class="right-align-buttons">
+      <button mat-button matStepperPrevious class="custom-button">Back</button>
+      <button mat-button (click)="stepper.reset()" class="custom-button">
+        Reset
+      </button>
+    </div>
+  </mat-step>
+</mat-stepper>

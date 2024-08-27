@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Delete Collection Point</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Do you wish to delete this collection point?</h3>
+  <p>
+    Warning! Doing so will permanently delete the endpoint itself and all its
+    associated data.
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close cdkfocusinitial>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" color="warn">Delete</button>
+</mat-dialog-actions>

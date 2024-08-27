@@ -1,0 +1,919 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IDentify Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">IDentify Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  AccountSettingComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/theme-pages/account-setting/account-setting.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-account-setting</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./account-setting.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./account-setting.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#email" >email</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#fetchUserData" >fetchUserData</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openEmailDialog" >openEmailDialog</a>
+                            </li>
+                            <li>
+                                <a href="#openPasswordDialog" >openPasswordDialog</a>
+                            </li>
+                            <li>
+                                <a href="#updateEmail" >updateEmail</a>
+                            </li>
+                            <li>
+                                <a href="#updatePassword" >updatePassword</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateUserData" >updateUserData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(apiService: <a href="../injectables/ApiService.html" target="_self">ApiService</a>, dialog: MatDialog, authService: <a href="../injectables/AuthenticationService.html" target="_self">AuthenticationService</a>, snackBar: MatSnackBar, formBuilder: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/theme-pages/account-setting/account-setting.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>apiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ApiService.html" target="_self" >ApiService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthenticationService.html" target="_self" >AuthenticationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Form.html" target="_self" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchUserData"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>fetchUserData</b></span>
+                        <a href="#fetchUserData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fetchUserData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/pages/theme-pages/account-setting/account-setting.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/pages/theme-pages/account-setting/account-setting.component.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openEmailDialog"></a>
+                    <span class="name">
+                        <span ><b>openEmailDialog</b></span>
+                        <a href="#openEmailDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openEmailDialog()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/pages/theme-pages/account-setting/account-setting.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openPasswordDialog"></a>
+                    <span class="name">
+                        <span ><b>openPasswordDialog</b></span>
+                        <a href="#openPasswordDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openPasswordDialog()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/pages/theme-pages/account-setting/account-setting.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateEmail"></a>
+                    <span class="name">
+                        <span ><b>updateEmail</b></span>
+                        <a href="#updateEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateEmail()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/pages/theme-pages/account-setting/account-setting.component.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatePassword"></a>
+                    <span class="name">
+                        <span ><b>updatePassword</b></span>
+                        <a href="#updatePassword"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updatePassword()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/pages/theme-pages/account-setting/account-setting.component.ts:84</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateUserData"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>updateUserData</b></span>
+                        <a href="#updateUserData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateUserData(userData: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/pages/theme-pages/account-setting/account-setting.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userData</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="email"></a>
+                    <span class="name">
+                        <span ><b>email</b></span>
+                        <a href="#email"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/theme-pages/account-setting/account-setting.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import { ApiService } from &#x27;src/app/_services/api/api.service&#x27;;
+import { AuthenticationService } from &#x27;src/app/_services/authentication.service&#x27;;
+import { UpdateEmailDialogComponent } from &#x27;./update-email-dialog/update-email-dialog.component&#x27;;
+import { UpdatePasswordDialogComponent } from &#x27;./update-password-dialog/update-password-dialog.component&#x27;;
+
+@Component({
+  selector: &#x27;app-account-setting&#x27;,
+  templateUrl: &#x27;./account-setting.component.html&#x27;,
+  styleUrls: [&#x27;./account-setting.component.scss&#x27;],
+})
+export class AccountSettingComponent implements OnInit {
+  email: string;
+
+  constructor(
+    private apiService: ApiService,
+    private dialog: MatDialog,
+    private authService: AuthenticationService,
+    private snackBar: MatSnackBar,
+    private formBuilder: FormBuilder,
+  ) {}
+
+  ngOnInit() {
+    this.fetchUserData();
+  }
+
+  private fetchUserData() {
+    this.apiService.fetchUser().subscribe(
+      (userData: any) &#x3D;&gt; {
+        this.email &#x3D; userData.email;
+      },
+      (error) &#x3D;&gt; {
+        console.error(&#x27;Error fetching user data:&#x27;, error);
+      },
+    );
+  }
+
+  openEmailDialog() {
+    const dialogRef &#x3D; this.dialog.open(UpdateEmailDialogComponent, {
+      width: &#x27;auto&#x27;,
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (result) {
+        this.updateUserData(result);
+      }
+    });
+  }
+
+  openPasswordDialog() {
+    const dialogRef &#x3D; this.dialog.open(UpdatePasswordDialogComponent, {
+      width: &#x27;400px&#x27;,
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (result) {
+        this.updateUserData(result);
+      }
+    });
+  }
+
+  private updateUserData(userData: any) {
+    // Implement the API call to update user data with the provided userData
+    // You can use the &#x27;userData&#x27; object to send the necessary data to the API
+    // Example:
+    // this.apiService.updateUser(userData).subscribe(
+    //   (response: any) &#x3D;&gt; {
+    //     // Handle the response from the API
+    //     this.authService.logout();
+    //   },
+    //   (error) &#x3D;&gt; {
+    //     console.error(&#x27;Error updating user data:&#x27;, error);
+    //   }
+    // );
+  }
+
+  updateEmail() {}
+
+  updatePassword() {}
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-card class&#x3D;&quot;cardWithShadow&quot;&gt;
+  &lt;mat-card-content class&#x3D;&quot;p-0&quot;&gt;
+    &lt;mat-tab-group mat-stretch-tabs&#x3D;&quot;false&quot; animationDuration&#x3D;&quot;0ms&quot;&gt;
+      &lt;mat-tab&gt;
+        &lt;ng-template mat-tab-label&gt;
+          &lt;div class&#x3D;&quot;d-flex align-items-center&quot;&gt;
+            &lt;mat-icon&gt;
+              &lt;i-tabler name&#x3D;&quot;user-circle&quot; class&#x3D;&quot;icon-20 m-r-8&quot;&gt;&lt;/i-tabler&gt;
+            &lt;/mat-icon&gt;
+          &lt;/div&gt;
+          Account
+        &lt;/ng-template&gt;
+        &lt;mat-card-content class&#x3D;&quot;p-y-24 b-t-1&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12&quot;&gt;
+              &lt;mat-card class&#x3D;&quot;cardWithShadow&quot;&gt;
+                &lt;mat-card-content class&#x3D;&quot;p-y-24&quot;&gt;
+                  &lt;mat-card-title&gt;Update Account Information&lt;/mat-card-title&gt;
+                  &lt;mat-card-subtitle class&#x3D;&quot;mat-body-1&quot;&gt;
+                    Current Email: {{ email }}
+                  &lt;/mat-card-subtitle&gt;
+
+                  &lt;section&gt;
+                    &lt;div class&#x3D;&quot;example-button-row&quot;&gt;
+                      &lt;button
+                        mat-raised-button
+                        color&#x3D;&quot;primary&quot;
+                        class&#x3D;&quot;mat-margin-right&quot;
+                        (click)&#x3D;&quot;openPasswordDialog()&quot;
+                      &gt;
+                        Update Password
+                      &lt;/button&gt;
+                      &lt;button
+                        mat-raised-button
+                        color&#x3D;&quot;primary&quot;
+                        (click)&#x3D;&quot;openEmailDialog()&quot;
+                      &gt;
+                        Update Email
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/section&gt;
+                &lt;/mat-card-content&gt;
+              &lt;/mat-card&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/mat-card-content&gt;
+      &lt;/mat-tab&gt;
+    &lt;/mat-tab-group&gt;
+  &lt;/mat-card-content&gt;
+&lt;/mat-card&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./account-setting.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-card class="cardWithShadow">  <mat-card-content class="p-0">    <mat-tab-group mat-stretch-tabs="false" animationDuration="0ms">      <mat-tab>        <ng-template mat-tab-label>          <div class="d-flex align-items-center">            <mat-icon>              <i-tabler name="user-circle" class="icon-20 m-r-8"></i-tabler>            </mat-icon>          </div>          Account        </ng-template>        <mat-card-content class="p-y-24 b-t-1">          <div class="row">            <div class="col-12">              <mat-card class="cardWithShadow">                <mat-card-content class="p-y-24">                  <mat-card-title>Update Account Information</mat-card-title>                  <mat-card-subtitle class="mat-body-1">                    Current Email: {{ email }}                  </mat-card-subtitle>                  <section>                    <div class="example-button-row">                      <button                        mat-raised-button                        color="primary"                        class="mat-margin-right"                        (click)="openPasswordDialog()"                      >                        Update Password                      </button>                      <button                        mat-raised-button                        color="primary"                        (click)="openEmailDialog()"                      >                        Update Email                      </button>                    </div>                  </section>                </mat-card-content>              </mat-card>            </div>          </div>        </mat-card-content>      </mat-tab>    </mat-tab-group>  </mat-card-content></mat-card></div>'
+    var COMPONENTS = [{'name': 'AccountSettingComponent', 'selector': 'app-account-setting'},{'name': 'AddUserDialogComponent', 'selector': 'app-add-user-dialog'},{'name': 'AppAccountSettingsRedirectComponent', 'selector': 'app-account-settings'},{'name': 'AppBoxedForgotPasswordComponent', 'selector': 'app-boxed-forgot-password'},{'name': 'AppBoxedLoginComponent', 'selector': 'app-boxed-login'},{'name': 'AppBoxedRegisterComponent', 'selector': 'app-boxed-register'},{'name': 'AppBoxedTwoStepsComponent', 'selector': 'app-boxed-two-steps'},{'name': 'AppBreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'AppCompanyManagementRedirectComponent', 'selector': 'app-company-management'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDashboard1Component', 'selector': 'app-dashboard1'},{'name': 'AppErrorComponent', 'selector': 'app-error'},{'name': 'AppFormManagementRedirectComponent', 'selector': 'app-form-management'},{'name': 'AppHorizontalHeaderComponent', 'selector': 'app-horizontal-header'},{'name': 'AppHorizontalNavItemComponent', 'selector': 'app-horizontal-nav-item'},{'name': 'AppHorizontalSearchDialogComponent', 'selector': 'app-search-dialog'},{'name': 'AppHorizontalSidebarComponent', 'selector': 'app-horizontal-sidebar'},{'name': 'AppLandingpageComponent', 'selector': 'app-landingpage'},{'name': 'AppMaintenanceComponent', 'selector': 'app-maintenance'},{'name': 'AppMixTableComponent', 'selector': 'app-mix-table'},{'name': 'AppNavItemComponent', 'selector': 'app-nav-item'},{'name': 'AppQRCodeGenerationRedirectComponent', 'selector': 'app-qr-redirect-component'},{'name': 'AppScanHistoryRedirectWidget', 'selector': 'app-scan-history-component'},{'name': 'AppScanIdComponent', 'selector': 'app-scan-id'},{'name': 'AppScanIdRedirectComponent', 'selector': 'app-redirect-id'},{'name': 'AppSideForgotPasswordComponent', 'selector': 'app-side-forgot-password'},{'name': 'AppSideLoginComponent', 'selector': 'app-side-login'},{'name': 'AppSideRegisterComponent', 'selector': 'app-side-register'},{'name': 'AppSideTwoStepsComponent', 'selector': 'app-side-two-steps'},{'name': 'BlankComponent', 'selector': 'app-blank'},{'name': 'BrandingComponent', 'selector': 'app-branding'},{'name': 'CheckingIpsDialogComponent', 'selector': 'app-checking-ips-dialog'},{'name': 'CollectionPointComponent', 'selector': 'app-collection-point'},{'name': 'CollectionPointDeleteDialog', 'selector': 'delete-point-dialog'},{'name': 'CommonScanIdComponent', 'selector': 'app-common-scan-id'},{'name': 'CompanyManagementComponent', 'selector': 'app-company-management'},{'name': 'ConsentDialogComponent', 'selector': 'app-consent-dialog'},{'name': 'CreateCompanyComponent', 'selector': 'app-create-company'},{'name': 'CreateNewFormDialogComponent', 'selector': 'app-create-new-form-dialog'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DeactivatedCollectionPointDialogComponent', 'selector': 'app-deactivated-collection-point-dialog'},{'name': 'DeleteFormDialogComponent', 'selector': 'app-delete-form-dialog'},{'name': 'DesktopQrCodeScanIdComponent', 'selector': 'desktop-qr-code-scan-id'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'dialog-dialog'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'register-dialog'},{'name': 'ExpandDataModalMobileComponent', 'selector': 'app-expanded-data-modal'},{'name': 'ExpandedDataModalComponent', 'selector': 'app-expanded-data-modal'},{'name': 'FailedJobsDialogComponent', 'selector': 'app-failed-jobs-dialog'},{'name': 'FormDialogComponent', 'selector': 'app-expanded-form-dialog'},{'name': 'FormManagementComponent', 'selector': 'app-form-management'},{'name': 'FormsTableComponent', 'selector': 'app-forms-table'},{'name': 'FullComponent', 'selector': 'app-full'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HowDoesThisWorkDialogComponent', 'selector': 'app-how-does-this-work-dialog'},{'name': 'HowItWorksComponent', 'selector': 'app-how-it-works'},{'name': 'InviteUsersComponent', 'selector': 'app-invite-users'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'NoCollectionPointsDialogComponent', 'selector': 'app-no-collection-points-dialog'},{'name': 'RedirectDialogComponent', 'selector': 'app-redirect-dialog'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TimeoutDialogComponent', 'selector': 'app-timeout-dialog'},{'name': 'UpdateEmailDialogComponent', 'selector': 'app-update-email-dialog'},{'name': 'UpdateFormDialogComponent', 'selector': 'app-update-form-dialog'},{'name': 'UpdatePasswordDialogComponent', 'selector': 'app-update-password-dialog'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViewUsersComponent', 'selector': 'app-view-users'},{'name': 'WelcomeDialogComponent', 'selector': 'app-welcome-dialog'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AccountSettingComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AccountSettingComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

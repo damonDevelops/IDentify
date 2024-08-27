@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" data-bs-theme="dark">
+<head>
+    <title th:text="${title}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <style>
+        /* Font styling */
+        body {
+            background-color: #006064;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Additional styles for specific elements can be added here */
+        h3, .form-control, .form-label {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header-image {
+            width: 50px; /* Adjust the width as needed */
+            height: auto; /* To maintain aspect ratio */
+            margin: 10px; /* Add margin to position it as desired */
+        }
+    </style>
+</head>
+<body onload="hideTokenIfPresent()">
+<div class="text-center" style="margin-top: 10%">
+    <h1>IDentify</h1>
+    <p>Revolutionize the way you scan</p>
+</div>
+<div class="d-flex justify-content-center align-items-center border border-dark-subtle rounded-3 dark-bg-subtle" style="margin: 5% 20%" id="primary-container">
+    <div class="container" style="margin: 5%">
+        <div id="alerts">
+        </div>
+        <div class="g-col-4">
+        </div>
+        <div class="g-col-4">
+            <h3 class="text-center">Finish signing up to IDentify, <span th:text="${user.getFullName()}">Steve Example</span></h3>
+            <form id="main-form">
+                <div class="mb-3" id="v-token">
+                    <label for="verificationTokenInput" class="form-label">Verification token</label>
+                    <input type="text" class="form-control" id="verificationTokenInput" aria-describedby="verificationHelp" th:value="${user.getVerificationToken()}" name="token"/>
+                    <div id="verificationHelp" class="form-text">Click here to request a new token</div>
+                </div>
+                <div class="mb-3" id="v-email">
+                    <label for="emailInput" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" th:value="${user.getEmail()}" name="email"/>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="passwordInput" name="password" oninput="onPasswordUpdate()"/>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordVerifyInput" class="form-label">Verify password</label>
+                    <input type="password" class="form-control" id="passwordVerifyInput" name="passwordVerify" oninput="onPasswordUpdate()"/>
+                    <div id="passwordRequirements" class="form-text">Password requirements:</div>
+                    <div id="requirementLabels">
+                        <span class="badge rounded-pill text-bg-danger" id="m1">Passwords match</span>
+                        <span class="badge rounded-pill text-bg-danger" id="m2">At least one special character</span>
+                        <span class="badge rounded-pill text-bg-danger" id="m3">Minimum numbers: 4</span>
+                        <span class="badge rounded-pill text-bg-danger" id="m4">Minimum length: 7</span>
+                        <span class="badge rounded-pill text-bg-danger" id="m5">Maximum length: 30</span>
+                        <span class="badge rounded-pill text-bg-danger" id="m6">Mix of upper and lowercase letters</span>
+                    </div>
+
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="marketingConsent" name="marketingConsent" checked/>
+                    <label class="form-check-label" for="marketingConsent">I agree to receive marketing emails from Identify</label>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="return submitFormData()" id="main-submit"><span class="sr-only"> Complete Signup</span></button>
+            </form>
+        </div>
+        <div class="g-col-4">
+        </div>
+    </div>
+</div>
+<script th:inline="javascript" th:src="@{/js/auth/verify/main.js}"></script>
+
+</body>
+</html>

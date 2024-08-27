@@ -1,0 +1,157 @@
+<mat-card-content class="p-y-24 b-t-1">
+  <div class="row">
+    <div class="col-12">
+      <mat-card class="b-1 shadow-none">
+        <mat-card-content class="p-y-24">
+          <mat-card-title class="m-b-24"
+            >Current Collection Points</mat-card-title
+          >
+          <ng-container *ngFor="let point of collectionPoints; let i = index">
+            <mat-expansion-panel
+              class="cardWithShadow"
+              [expanded]="expandedPointIds.includes(point.id)"
+              (expandedChange)="setExpandedPoint(point.id)"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title class="f-w-600 mat-body-1">
+                  {{ point.name }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-card-content class="collection-point-content">
+                <div class="row">
+                  <!-- Left column for collection point information -->
+                  <div class="col-md-6">
+                    <div class="collection-info">
+                      <p><strong>Endpoint:</strong> {{ point.endpoint }}</p>
+                    </div>
+                    <!-- Current Status row -->
+                    <div class="collection-info">
+                      <mat-slide-toggle
+                        labelPosition="before"
+                        disableRipple="true"
+                        checked="{{ getState(i) }}"
+                        (change)="onStatusToggle(i)"
+                      >
+                        Current Status:
+                      </mat-slide-toggle>
+                    </div>
+                    <!-- Delete button row (below Current Status) -->
+                    <div class="collection-info">
+                      <button
+                        mat-stroked-button
+                        color="warn"
+                        (click)="openDeletePointDialog(i)"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                    <!-- Users with access to the endpoint row -->
+                    <div class="collection-info">
+                      <p>
+                        <strong>Users with access to the endpoint:</strong>
+                      </p>
+                      <ul>
+                        <li *ngFor="let user of point.accessList">
+                          {{ user.username }}
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Delete button row (below Current Status) -->
+                    <div class="collection-info">
+                      <button
+                        mat-stroked-button
+                        color="primary"
+                        (click)="addUserAccess(i)"
+                      >
+                        Add User Access
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Right column for QR code and button -->
+                  <div class="col-md-6">
+                    <div class="qrcodeImage text-center">
+                      <!-- Center-align the QR image -->
+                      <qrcode
+                        (qrCodeURL)="onDownloadUrl($event)"
+                        qrdata="{{
+                          qrCodeUrl + '/?endpoint=' + getEndpointB64(i)
+                        }}"
+                        [allowEmptyString]="true"
+                        [cssClass]="'center'"
+                        [colorDark]="'#000000ff'"
+                        [colorLight]="'#ffffffff'"
+                        [elementType]="'canvas'"
+                        [errorCorrectionLevel]="'M'"
+                        [imageSrc]="qrCodeLogo"
+                        [imageHeight]="75"
+                        [imageWidth]="75"
+                        [margin]="4"
+                        [scale]="1"
+                        [width]="300"
+                      ></qrcode>
+                      <a
+                        [href]="qrCodeImagePath"
+                        download="qrcode"
+                        class="text-right"
+                      >
+                        <!-- Align the button to the right -->
+                        <button mat-raised-button color="primary">
+                          Download QR Code
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-expansion-panel>
+          </ng-container>
+        </mat-card-content>
+        <mat-card-content class="p-y-24">
+          <mat-card-title class="m-b-24"
+            >Create New Collection Points</mat-card-title
+          >
+          <form
+            [formGroup]="collectionPointForm"
+            (ngSubmit)="createNewCollectionPoint()"
+          >
+            <mat-form-field appearance="outline" class="w-100" color="primary">
+              <mat-label>Collection Point Name</mat-label>
+              <input matInput formControlName="collectionPointName" />
+              <mat-error
+                *ngIf="
+                  collectionPointForm
+                    .get('collectionPointName')
+                    ?.hasError('required')
+                "
+              >
+                Collection Point Name is required
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" color="primary">
+              <mat-label>Collection Point</mat-label>
+              <input matInput formControlName="collectionPoint" />
+              <mat-error
+                *ngIf="
+                  collectionPointForm
+                    .get('collectionPoint')
+                    ?.hasError('required')
+                "
+              >
+                Collection Point is required
+              </mat-error>
+            </mat-form-field>
+            <button
+              mat-flat-button
+              color="primary"
+              [disabled]="collectionPointForm.invalid"
+              type="submit"
+            >
+              Create Collection Point
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</mat-card-content>

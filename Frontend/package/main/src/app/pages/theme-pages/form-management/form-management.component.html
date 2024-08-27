@@ -1,0 +1,44 @@
+<mat-card class="cardWithShadow">
+  <mat-card-content class="p-24 m-b-24">
+    <mat-card-title>Form Management</mat-card-title>
+    <mat-card-subtitle class="m-b-8">
+      Upload your forms for quicker customer interactions!
+    </mat-card-subtitle>
+
+    <div class="how-does-it-work-link">
+      <a
+        matTooltip="Info about the action"
+        matTooltipPosition="right"
+        (click)="openHowDoesThisWorkDialog()"
+        >How does this work?</a
+      >
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="createNewForm()"
+      class="m-b-24"
+    >
+      Create New Form
+    </button>
+
+    <!-- Conditionally render the title and subtitle for "Modify Forms" section -->
+    <ng-container *ngIf="noFormsBool; else modifyFormsContent">
+      <mat-card-title>No Forms Available for Modification</mat-card-title>
+      <mat-card-subtitle class="m-b-8">
+        Create a form to edit or delete them.
+      </mat-card-subtitle>
+    </ng-container>
+
+    <!-- Content for "Modify Forms" section when noFormsBool is false -->
+    <ng-template #modifyFormsContent>
+      <mat-card-title>Modify Forms</mat-card-title>
+      <mat-card-subtitle class="m-b-8">
+        View, edit, and delete your forms
+      </mat-card-subtitle>
+    </ng-template>
+
+    <app-forms-table></app-forms-table>
+  </mat-card-content>
+</mat-card>

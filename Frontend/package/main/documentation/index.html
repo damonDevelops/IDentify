@@ -1,0 +1,171 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IDentify Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="./" class="navbar-brand">IDentify Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1>IDentify Frontend README</h1>
+<p>Welcome to the IDentify Frontend, this readme will give you an overview of how to navigate our site, important details and information on building the project as well as how to build the documentation package.</p>
+<h2>How to Run</h2>
+<ol>
+<li><p>Ensure your computer meets the software requirements:</p>
+<ul>
+<li>Angular CLI: 16.0.2</li>
+<li>Node: 18.16.0</li>
+<li>Package Manager: npm 9.6.2</li>
+</ul>
+</li>
+<li><p>Clone the frontend git repository from <a href="https://website-name.com" title="Link title">Git Repository</a></p>
+<ul>
+<li>We suggest using VsCode to do this as it was the IDE which the system was developed in</li>
+</ul>
+</li>
+<li><p>Running the Frontend</p>
+<ul>
+<li>Now that you have the frontend open in your IDE of choice, navigate to package/main</li>
+<li>In VsCode, you can right click on the package/main folder in finder and select &#39;Open in Integrated Terminal&#39;, otherwise, open a terminal and use <code>cd .\package\main\</code></li>
+<li>To install the node modules, use the command <code>npm i</code>. This will install all dependencies of the system</li>
+<li>Once this is complete, if you are running the backend locally on your PC (see backend README), use the command <code>ng serve -c development</code>.</li>
+<li>The system will take some time to load if it is the first time running, once it is successful, you will see the following messages:<ul>
+<li><code>** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ ** </code></li>
+<li><code>√ Compiled successfully.</code></li>
+<li><code>✔ Browser application bundle generation complete.</code></li>
+</ul>
+</li>
+<li>Either CTRL + click on the link or navigate to <a href="http://localhost:4200/">http://localhost:4200/</a></li>
+</ul>
+</li>
+</ol>
+<h2>Notes about the backend</h2>
+<p>If you are running the backend and frontend locally, you will need to use a no CORS browser to log in and use the system. The system WILL NOT WORK unless you do so</p>
+<ul>
+<li>To see how to set up a no CORS browser, visit <a href="https://alfilatov.com/posts/run-chrome-without-cors/">Run Chrome without CORS</a></li>
+</ul>
+<h1>Running Documentation</h1>
+<ul>
+<li>The angular project has automatic documentation which is powered by <a href="https://compodoc.app/">CompoDoc</a></li>
+<li>To view the documentation, navigate to package/main in the same way as discussed previously</li>
+<li>Enter the command <code>compodoc -p tsconfig.doc.json -s -r 9000</code></li>
+<li>You will then see a message like this:<ul>
+<li><code>Serving documentation from ./documentation/ at http://127.0.0.1:9000</code></li>
+<li>Navigate to the address given and you can explore the documentation</li>
+</ul>
+</li>
+</ul>
+<h1>Using the system</h1>
+<ul>
+<li>To learn how to use the system, check the <a href="">User Manual</a></li>
+</ul>
+<h1>Additional notes:</h1>
+<p>The system has a default user, to log in to it use the following credentials:</p>
+<ul>
+<li>Email: demo</li>
+<li>Password: demo</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

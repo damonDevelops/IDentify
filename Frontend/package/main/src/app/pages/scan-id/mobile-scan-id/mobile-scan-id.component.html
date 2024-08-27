@@ -1,0 +1,83 @@
+<mat-card class="cardWithShadow">
+  <mat-card-content class="p-24 m-b-24">
+    <mat-card-title>Scan a New ID</mat-card-title>
+    <mat-card-subtitle
+      >Upload a new identification card for processing</mat-card-subtitle
+    >
+    <div class="image-wrapper">
+      <img [src]="imageSrc" alt="identification card svg" />
+    </div>
+
+    <div
+      class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+    >
+      <div class="autocomplete-container">
+        <mat-form-field>
+          <mat-label>Select a Collection Point</mat-label>
+          <input
+            matInput
+            placeholder="Select a Collection Point"
+            [matAutocomplete]="auto"
+            [(ngModel)]="selectedCollectionPoint"
+          />
+          <mat-autocomplete
+            #auto="matAutocomplete"
+            [displayWith]="displayPointName"
+          >
+            <mat-option *ngFor="let point of collectionPoints" [value]="point">
+              {{ point.name }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+    </div>
+    <div
+      class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+    >
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="fileInput.click()"
+        style="margin-bottom: 8px"
+        [disabled]="isUploadDisabled"
+      >
+        Upload Image
+      </button>
+      <input
+        hidden
+        accept=".png,.jpg"
+        (change)="onChangeFile($event)"
+        #fileInput
+        type="file"
+        id="file"
+      />
+    </div>
+
+    <div
+      class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+    >
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="isSubmitDisabled"
+        (click)="processImage($event)"
+        style="margin-bottom: 8px"
+      >
+        Submit for Processing
+      </button>
+    </div>
+    <div
+      class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+    >
+      <button
+        mat-raised-button
+        color="warn"
+        [disabled]="isRemoveDisabled"
+        (click)="removeImage()"
+      >
+        Remove Image
+      </button>
+    </div>
+  </mat-card-content>
+  <mat-card-content class="p-24"> </mat-card-content>
+</mat-card>

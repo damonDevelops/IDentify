@@ -1,0 +1,71 @@
+<div class="form-container">
+  <h2 mat-dialog-title>Create New Form</h2>
+</div>
+
+<div mat-dialog-content>
+  <form #form="ngForm">
+    <!-- File Name Input -->
+    <div class="form-container">
+      <mat-form-field>
+        <mat-label>File Name</mat-label>
+        <input
+          matInput
+          placeholder="File Name"
+          [(ngModel)]="formName"
+          name="formName"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <!-- Description Textarea -->
+    <div class="form-container">
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea
+          matInput
+          placeholder="Description"
+          [(ngModel)]="description"
+          name="description"
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="5"
+        ></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="form-container">
+      <img
+        *ngIf="selectedFile"
+        [src]="getIconForFileType(selectedFile.name)"
+        alt="File Icon"
+        width="100"
+        height="100"
+      />
+      <p *ngIf="selectedFile">{{ selectedFile.name }}</p>
+    </div>
+
+    <!-- File Upload Button -->
+    <div class="form-container">
+      <input
+        type="file"
+        (change)="onFileSelected($event)"
+        accept=".docx"
+        style="display: none"
+        #fileInput
+        required
+      />
+      <button mat-raised-button color="primary" (click)="fileInput.click()">
+        Upload Word Document
+      </button>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCloseClick()">Cancel</button>
+  <button mat-button (click)="createForm()" [disabled]="!form.valid">
+    Create
+  </button>
+  <!-- Disable button if form is not valid -->
+</div>

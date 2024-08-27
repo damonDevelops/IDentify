@@ -1,0 +1,21 @@
+<mat-card class="cardWithShadow">
+  <mat-card-content class="p-24 m-b-24">
+    <mat-card-title>Capture New Card</mat-card-title>
+    <mat-card-subtitle
+      >Upload a new identification card for processing</mat-card-subtitle
+    >
+    <div class="d-flex align-items-center justify-content-center">
+      <i-tabler name="id-badge-2" style="width: 60%; height: 60%"></i-tabler>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="redirect()"
+        style="margin-bottom: 8px"
+      >
+        Capture New Card
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

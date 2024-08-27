@@ -1,0 +1,527 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IDentify Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">IDentify Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  CollectionPointDeleteDialog</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/theme-pages/company-management/company-management/collection-point/collection-point.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>delete-point-dialog</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">Standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>MatDialogModule</code>
+                            <code>MatButtonModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>company-collection-point-dialog.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { MatDialog, MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
+import { SafeUrl } from &#x27;@angular/platform-browser&#x27;;
+import { ApiService } from &#x27;src/app/_services/api/api.service&#x27;;
+import { CompanyServiceService } from &#x27;src/app/_services/company/company-service.service&#x27;;
+import { environment } from &#x27;src/environments/environment&#x27;;
+import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
+import { AuthoritiesService } from &#x27;src/app/_services/authorities/authorities.service&#x27;;
+import { AddUserDialogComponent } from &#x27;./add-user-dialog/add-user-dialog/add-user-dialog.component&#x27;;
+import { Subject, takeUntil } from &#x27;rxjs&#x27;;
+
+interface CollectionPoint {
+  id: string;
+  endpoint: string;
+  name: string;
+  accessList: AccessListUser[];
+  companyName: string;
+  state: string;
+}
+
+interface AccessListUser {
+  id: number;
+  username: string;
+  email: string;
+}
+
+enum State {
+  DEACTIVATED &#x3D; &#x27;DEACTIVATED&#x27;,
+  ACTIVE &#x3D; &#x27;ACTIVE&#x27;,
+}
+
+@Component({
+  selector: &#x27;app-collection-point&#x27;,
+  templateUrl: &#x27;./collection-point.component.html&#x27;,
+  styleUrls: [&#x27;./collection-point.component.scss&#x27;],
+})
+export class CollectionPointComponent {
+  collectionPoints: CollectionPoint[] &#x3D; [];
+  expandedPointIds: string[] &#x3D; [];
+  collectionPointForm: FormGroup;
+  collectionPointName: string &#x3D; &#x27;&#x27;; // Store the collection point name
+
+  userHasEditCompanyPermission: boolean &#x3D; false; // Add this property
+
+  private ngUnsubscribe &#x3D; new Subject&lt;void&gt;();
+
+  constructor(
+    private apiService: ApiService,
+    private companyService: CompanyServiceService,
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar,
+    private fb: FormBuilder,
+    private authoritiesService: AuthoritiesService,
+  ) {
+    this.collectionPointForm &#x3D; this.fb.group({
+      collectionPointName: [&#x27;&#x27;, Validators.required],
+      collectionPoint: [&#x27;&#x27;, Validators.required],
+    });
+
+    // Subscribe to the authorities to check for &#x27;EDIT_COMPANY&#x27; permission
+    this.authoritiesService.companyPermissions$.subscribe((permissions) &#x3D;&gt; {
+      this.userHasEditCompanyPermission &#x3D; permissions.includes(&#x27;EDIT_COMPANY&#x27;);
+    });
+  }
+
+  ngOnInit(): void {
+    if (this.apiService.getHasCompany()) {
+      this.fetchCollectionPoints();
+    }
+  }
+
+  //qr code data varaible store
+  qrCodeUrl: string &#x3D; &#x60;${environment.frontendUrl}/authentication/scan&#x60;;
+  qrCodeLogo: string &#x3D; &#x27;./assets/images/logos/IDentifyLogoWH.png&#x27;;
+  qrCodeImagePath: SafeUrl &#x3D; &#x27;&#x27;;
+
+  onDownloadUrl(url: SafeUrl) {
+    this.qrCodeImagePath &#x3D; url;
+  }
+  getEndpointB64(pointIndex: number): string {
+    let returnString: string | null &#x3D; null;
+
+    // Subscribe to the getActiveCompany() observable
+    this.companyService
+      .getActiveCompany()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((activeCompany) &#x3D;&gt; {
+        // Now that you have the companyEndpoint, you can use it
+        const endpointB64 &#x3D; btoa(
+          activeCompany!.companyEndpoint +
+            &#x27;/&#x27; +
+            this.collectionPoints[pointIndex].endpoint +
+            &#x27;/&#x27;,
+        );
+
+        // Do something with endpointB64 if needed
+        returnString &#x3D; endpointB64;
+      });
+
+    // Return an initial value or null if the subscription hasn&#x27;t provided a value yet
+    return returnString!;
+  }
+
+  fetchCollectionPoints() {
+    this.companyService
+      .getActiveCompany()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((activeCompany) &#x3D;&gt; {
+        if (activeCompany) {
+          // If there&#x27;s an active company, update the collection points here
+          this.apiService.fetchCollectionPointsNew(activeCompany.id).subscribe(
+            (response) &#x3D;&gt; {
+              this.collectionPoints &#x3D; response;
+            },
+            (error) &#x3D;&gt; {
+              // Handle error if needed
+            },
+          );
+        }
+      });
+  }
+
+  getState(pointIndex: number): boolean {
+    return this.collectionPoints[pointIndex].state &#x3D;&#x3D;&#x3D; State.ACTIVE;
+  }
+
+  getToggledState(pointIndex: number): State {
+    return this.collectionPoints[pointIndex].state &#x3D;&#x3D;&#x3D; State.DEACTIVATED
+      ? State.ACTIVE
+      : State.DEACTIVATED;
+  }
+
+  onStatusToggle(pointIndex: number) {
+    this.companyService
+      .getActiveCompany()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((activeCompany) &#x3D;&gt; {
+        if (activeCompany) {
+          // If there&#x27;s an active company, update the collection points here
+          this.apiService
+            .putCollectionPointState(
+              this.collectionPoints[pointIndex].endpoint,
+              this.getToggledState(pointIndex),
+              activeCompany.companyEndpoint,
+            )
+            .subscribe((response) &#x3D;&gt; {
+              console.log(&#x27;State updated successful&#x27;);
+              this.collectionPoints[pointIndex].state &#x3D;
+                this.getToggledState(pointIndex);
+            });
+        }
+      });
+  }
+
+  openDeletePointDialog(pointIndex: number) {
+    const dialogRef &#x3D; this.dialog.open(CollectionPointDeleteDialog);
+
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (result &#x3D;&#x3D;&#x3D; true) {
+        this.companyService
+          .getActiveCompany()
+          .pipe(takeUntil(this.ngUnsubscribe))
+          .subscribe((activeCompany) &#x3D;&gt; {
+            if (activeCompany) {
+              this.apiService
+                .deleteCollectionPoint(
+                  this.collectionPoints[pointIndex].endpoint,
+                  activeCompany.companyEndpoint,
+                )
+                .subscribe((response) &#x3D;&gt; {
+                  console.log(&#x27;Deleted point successful&#x27;);
+                  window.location.reload();
+                });
+            }
+          });
+      }
+    });
+  }
+
+  addUserAccess(pointIndex: number): void {
+    console.log(&#x27;Point index: &#x27; + this.collectionPoints[pointIndex].endpoint);
+    //make a call to the api to add a user
+    const dialogRef &#x3D; this.dialog.open(AddUserDialogComponent, {
+      data: { collectionPointId: this.collectionPoints[pointIndex].endpoint },
+      width: &#x27;350px&#x27;,
+    });
+  }
+
+  setExpandedPoint(pointId: string): void {
+    const index &#x3D; this.expandedPointIds.indexOf(pointId);
+    if (index &#x3D;&#x3D;&#x3D; -1) {
+      this.expandedPointIds.push(pointId);
+    } else {
+      this.expandedPointIds.splice(index, 1);
+    }
+  }
+
+  createNewCollectionPoint() {
+    // Check if the user has &#x27;EDIT_COMPANY&#x27; permission before creating a new collection point
+    if (!this.userHasEditCompanyPermission) {
+      // You can show a message or handle it in any way you prefer
+      console.log(
+        &#x27;User does not have permission to create a new collection point&#x27;,
+      );
+      return;
+    }
+
+    const collectionPointName &#x3D;
+      this.collectionPointForm.value.collectionPointName;
+    const collectionPoint &#x3D; this.collectionPointForm.value.collectionPoint;
+
+    this.companyService
+      .getActiveCompany()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((activeCompany) &#x3D;&gt; {
+        if (activeCompany) {
+          this.apiService
+            .createNewCollectionPoint(
+              collectionPointName,
+              collectionPoint,
+              activeCompany.id,
+            )
+            .subscribe(
+              () &#x3D;&gt; {
+                const snackBarRef &#x3D; this.snackBar.open(
+                  &#x27;Collection point created successfully&#x27;,
+                  &#x27;Close&#x27;,
+                  {
+                    duration: 3000,
+                  },
+                );
+
+                snackBarRef.afterDismissed().subscribe(() &#x3D;&gt; {
+                  // This code will be executed after the snackbar is closed
+                  window.location.reload();
+                });
+              },
+              (error) &#x3D;&gt; {
+                console.error(&#x27;Error creating collection point:&#x27;, error);
+              },
+            );
+        }
+      });
+  }
+
+  ngOnDestroy() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
+}
+
+@Component({
+  selector: &#x27;delete-point-dialog&#x27;,
+  templateUrl: &#x27;company-collection-point-dialog.html&#x27;,
+  standalone: true,
+  imports: [MatDialogModule, MatButtonModule],
+})
+export class CollectionPointDeleteDialog {}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h2 mat-dialog-title&gt;Delete Collection Point&lt;/h2&gt;
+&lt;mat-dialog-content class&#x3D;&quot;mat-typography&quot;&gt;
+  &lt;h3&gt;Do you wish to delete this collection point?&lt;/h3&gt;
+  &lt;p&gt;
+    Warning! Doing so will permanently delete the endpoint itself and all its
+    associated data.
+  &lt;/p&gt;
+&lt;/mat-dialog-content&gt;
+&lt;mat-dialog-actions align&#x3D;&quot;end&quot;&gt;
+  &lt;button mat-button mat-dialog-close cdkfocusinitial&gt;Cancel&lt;/button&gt;
+  &lt;button mat-button [mat-dialog-close]&#x3D;&quot;true&quot; color&#x3D;&quot;warn&quot;&gt;Delete&lt;/button&gt;
+&lt;/mat-dialog-actions&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h2 mat-dialog-title>Delete Collection Point</h2><mat-dialog-content class="mat-typography">  <h3>Do you wish to delete this collection point?</h3>  <p>    Warning! Doing so will permanently delete the endpoint itself and all its    associated data.  </p></mat-dialog-content><mat-dialog-actions align="end">  <button mat-button mat-dialog-close cdkfocusinitial>Cancel</button>  <button mat-button [mat-dialog-close]="true" color="warn">Delete</button></mat-dialog-actions></div>'
+    var COMPONENTS = [{'name': 'AccountSettingComponent', 'selector': 'app-account-setting'},{'name': 'AddUserDialogComponent', 'selector': 'app-add-user-dialog'},{'name': 'AppAccountSettingsRedirectComponent', 'selector': 'app-account-settings'},{'name': 'AppBoxedForgotPasswordComponent', 'selector': 'app-boxed-forgot-password'},{'name': 'AppBoxedLoginComponent', 'selector': 'app-boxed-login'},{'name': 'AppBoxedRegisterComponent', 'selector': 'app-boxed-register'},{'name': 'AppBoxedTwoStepsComponent', 'selector': 'app-boxed-two-steps'},{'name': 'AppBreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'AppCompanyManagementRedirectComponent', 'selector': 'app-company-management'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDashboard1Component', 'selector': 'app-dashboard1'},{'name': 'AppErrorComponent', 'selector': 'app-error'},{'name': 'AppFormManagementRedirectComponent', 'selector': 'app-form-management'},{'name': 'AppHorizontalHeaderComponent', 'selector': 'app-horizontal-header'},{'name': 'AppHorizontalNavItemComponent', 'selector': 'app-horizontal-nav-item'},{'name': 'AppHorizontalSearchDialogComponent', 'selector': 'app-search-dialog'},{'name': 'AppHorizontalSidebarComponent', 'selector': 'app-horizontal-sidebar'},{'name': 'AppLandingpageComponent', 'selector': 'app-landingpage'},{'name': 'AppMaintenanceComponent', 'selector': 'app-maintenance'},{'name': 'AppMixTableComponent', 'selector': 'app-mix-table'},{'name': 'AppNavItemComponent', 'selector': 'app-nav-item'},{'name': 'AppQRCodeGenerationRedirectComponent', 'selector': 'app-qr-redirect-component'},{'name': 'AppScanHistoryRedirectWidget', 'selector': 'app-scan-history-component'},{'name': 'AppScanIdComponent', 'selector': 'app-scan-id'},{'name': 'AppScanIdRedirectComponent', 'selector': 'app-redirect-id'},{'name': 'AppSideForgotPasswordComponent', 'selector': 'app-side-forgot-password'},{'name': 'AppSideLoginComponent', 'selector': 'app-side-login'},{'name': 'AppSideRegisterComponent', 'selector': 'app-side-register'},{'name': 'AppSideTwoStepsComponent', 'selector': 'app-side-two-steps'},{'name': 'BlankComponent', 'selector': 'app-blank'},{'name': 'BrandingComponent', 'selector': 'app-branding'},{'name': 'CheckingIpsDialogComponent', 'selector': 'app-checking-ips-dialog'},{'name': 'CollectionPointComponent', 'selector': 'app-collection-point'},{'name': 'CollectionPointDeleteDialog', 'selector': 'delete-point-dialog'},{'name': 'CommonScanIdComponent', 'selector': 'app-common-scan-id'},{'name': 'CompanyManagementComponent', 'selector': 'app-company-management'},{'name': 'ConsentDialogComponent', 'selector': 'app-consent-dialog'},{'name': 'CreateCompanyComponent', 'selector': 'app-create-company'},{'name': 'CreateNewFormDialogComponent', 'selector': 'app-create-new-form-dialog'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DeactivatedCollectionPointDialogComponent', 'selector': 'app-deactivated-collection-point-dialog'},{'name': 'DeleteFormDialogComponent', 'selector': 'app-delete-form-dialog'},{'name': 'DesktopQrCodeScanIdComponent', 'selector': 'desktop-qr-code-scan-id'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'dialog-dialog'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'register-dialog'},{'name': 'ExpandDataModalMobileComponent', 'selector': 'app-expanded-data-modal'},{'name': 'ExpandedDataModalComponent', 'selector': 'app-expanded-data-modal'},{'name': 'FailedJobsDialogComponent', 'selector': 'app-failed-jobs-dialog'},{'name': 'FormDialogComponent', 'selector': 'app-expanded-form-dialog'},{'name': 'FormManagementComponent', 'selector': 'app-form-management'},{'name': 'FormsTableComponent', 'selector': 'app-forms-table'},{'name': 'FullComponent', 'selector': 'app-full'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HowDoesThisWorkDialogComponent', 'selector': 'app-how-does-this-work-dialog'},{'name': 'HowItWorksComponent', 'selector': 'app-how-it-works'},{'name': 'InviteUsersComponent', 'selector': 'app-invite-users'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'NoCollectionPointsDialogComponent', 'selector': 'app-no-collection-points-dialog'},{'name': 'RedirectDialogComponent', 'selector': 'app-redirect-dialog'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TimeoutDialogComponent', 'selector': 'app-timeout-dialog'},{'name': 'UpdateEmailDialogComponent', 'selector': 'app-update-email-dialog'},{'name': 'UpdateFormDialogComponent', 'selector': 'app-update-form-dialog'},{'name': 'UpdatePasswordDialogComponent', 'selector': 'app-update-password-dialog'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViewUsersComponent', 'selector': 'app-view-users'},{'name': 'WelcomeDialogComponent', 'selector': 'app-welcome-dialog'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CollectionPointDeleteDialog'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CollectionPointDeleteDialog.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

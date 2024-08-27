@@ -1,0 +1,76 @@
+<div class="header-container">
+  <mat-toolbar color="primary">
+    <img
+      src="../../../../../assets/images/logos/IDentifyLogo.svg"
+      alt="Company Logo"
+      class="logo"
+    />
+  </mat-toolbar>
+</div>
+<div class="card-container">
+  <mat-card class="cardWithShadow">
+    <mat-card-content class="p-24 m-b-24">
+      <mat-card-title class="title-text-center"
+        >Scan your Identification Card</mat-card-title
+      >
+      <mat-card-subtitle class="subtitle-text-center"
+        >Simply take a photo of your ID card or upload an existing
+        photo</mat-card-subtitle
+      >
+      <div class="image-wrapper">
+        <img [src]="imageSrc" alt="identification card svg" />
+      </div>
+
+      <div
+        class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+      >
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="fileInput.click()"
+          style="margin-bottom: 8px"
+          [disabled]="isUploadDisabled"
+        >
+          Upload Image
+        </button>
+        <input
+          hidden
+          accept=".png,.jpg"
+          (change)="onChangeFile($event)"
+          #fileInput
+          type="file"
+          id="file"
+        />
+      </div>
+
+      <div
+        class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+      >
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="isSubmitDisabled"
+          (click)="processImage($event)"
+          style="margin-bottom: 8px"
+        >
+          Submit for Processing
+        </button>
+      </div>
+      <div
+        class="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-8"
+      >
+        <button
+          mat-raised-button
+          color="warn"
+          [disabled]="isRemoveDisabled"
+          (click)="removeImage()"
+        >
+          Remove Image
+        </button>
+      </div>
+      <div class="how-does-it-work-link">
+        <a href="/landingpage" target="_blank">How does this work?</a>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

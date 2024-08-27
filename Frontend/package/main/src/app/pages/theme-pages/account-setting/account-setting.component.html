@@ -1,0 +1,50 @@
+<mat-card class="cardWithShadow">
+  <mat-card-content class="p-0">
+    <mat-tab-group mat-stretch-tabs="false" animationDuration="0ms">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <div class="d-flex align-items-center">
+            <mat-icon>
+              <i-tabler name="user-circle" class="icon-20 m-r-8"></i-tabler>
+            </mat-icon>
+          </div>
+          Account
+        </ng-template>
+        <mat-card-content class="p-y-24 b-t-1">
+          <div class="row">
+            <div class="col-12">
+              <mat-card class="cardWithShadow">
+                <mat-card-content class="p-y-24">
+                  <mat-card-title>Update Account Information</mat-card-title>
+                  <mat-card-subtitle class="mat-body-1">
+                    Current Email: {{ email }}
+                  </mat-card-subtitle>
+
+                  <section>
+                    <div class="example-button-row">
+                      <button
+                        mat-raised-button
+                        color="primary"
+                        class="mat-margin-right"
+                        (click)="openPasswordDialog()"
+                      >
+                        Update Password
+                      </button>
+                      <button
+                        mat-raised-button
+                        color="primary"
+                        (click)="openEmailDialog()"
+                      >
+                        Update Email
+                      </button>
+                    </div>
+                  </section>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,8 @@
+/* Add this CSS to your component's style file or your global styles */
+.form-container {
+  display: flex;
+  flex-direction: column; /* Align form fields vertically */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically */
+  text-align: center; /* Center text within form fields */
+}

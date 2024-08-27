@@ -1,0 +1,1498 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IDentify Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">IDentify Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  AddUserDialogComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+                <code>OnDestroy</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-add-user-dialog</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./add-user-dialog.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./add-user-dialog.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Public</span>
+                                <a href="#data" >data</a>
+                            </li>
+                            <li>
+                                <a href="#emailsWithAccess" >emailsWithAccess</a>
+                            </li>
+                            <li>
+                                <a href="#filteredOptions" >filteredOptions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#filteredOptionsSubject" >filteredOptionsSubject</a>
+                            </li>
+                            <li>
+                                <a href="#filteredUsers" >filteredUsers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#matAutocomplete" >matAutocomplete</a>
+                            </li>
+                            <li>
+                                <a href="#myControl" >myControl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ngUnsubscribe" >ngUnsubscribe</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#subscriptions" >subscriptions</a>
+                            </li>
+                            <li>
+                                <a href="#users" >users</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_filter" >_filter</a>
+                            </li>
+                            <li>
+                                <a href="#addUserSubmit" >addUserSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#fetchCollectionPointInformation" >fetchCollectionPointInformation</a>
+                            </li>
+                            <li>
+                                <a href="#fetchUsers" >fetchUsers</a>
+                            </li>
+                            <li>
+                                <a href="#filterUsersWithAccess" >filterUsersWithAccess</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openAutocompletePanel" >openAutocompletePanel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#removeUserFromAutocomplete" >removeUserFromAutocomplete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#showSnackbar" >showSnackbar</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(apiService: <a href="../injectables/ApiService.html" target="_self">ApiService</a>, companyService: <a href="../injectables/CompanyServiceService.html" target="_self">CompanyServiceService</a>, snackBar: MatSnackBar, data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>apiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ApiService.html" target="_self" >ApiService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>companyService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CompanyServiceService.html" target="_self" >CompanyServiceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>data</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_filter"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>_filter</b></span>
+                        <a href="#_filter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_filter(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addUserSubmit"></a>
+                    <span class="name">
+                        <span ><b>addUserSubmit</b></span>
+                        <a href="#addUserSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addUserSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchCollectionPointInformation"></a>
+                    <span class="name">
+                        <span ><b>fetchCollectionPointInformation</b></span>
+                        <a href="#fetchCollectionPointInformation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fetchCollectionPointInformation()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Subscription</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchUsers"></a>
+                    <span class="name">
+                        <span ><b>fetchUsers</b></span>
+                        <a href="#fetchUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fetchUsers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Subscription</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterUsersWithAccess"></a>
+                    <span class="name">
+                        <span ><b>filterUsersWithAccess</b></span>
+                        <a href="#filterUsersWithAccess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filterUsersWithAccess()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="116"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:116</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="183"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:183</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openAutocompletePanel"></a>
+                    <span class="name">
+                        <span ><b>openAutocompletePanel</b></span>
+                        <a href="#openAutocompletePanel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openAutocompletePanel()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeUserFromAutocomplete"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>removeUserFromAutocomplete</b></span>
+                        <a href="#removeUserFromAutocomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeUserFromAutocomplete(email: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:168</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>email</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showSnackbar"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>showSnackbar</b></span>
+                        <a href="#showSnackbar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>showSnackbar(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, panelClass: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:176</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>panelClass</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="data"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier">Public</span>
+                        <span ><b>data</b></span>
+                        <a href="#data"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Inject(MAT_DIALOG_DATA)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="emailsWithAccess"></a>
+                    <span class="name">
+                        <span ><b>emailsWithAccess</b></span>
+                        <a href="#emailsWithAccess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Set&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Set&lt;string&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredOptions"></a>
+                    <span class="name">
+                        <span ><b>filteredOptions</b></span>
+                        <a href="#filteredOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;string[]&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredOptionsSubject"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>filteredOptionsSubject</b></span>
+                        <a href="#filteredOptionsSubject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;string[]&gt;([])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredUsers"></a>
+                    <span class="name">
+                        <span ><b>filteredUsers</b></span>
+                        <a href="#filteredUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="matAutocomplete"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>matAutocomplete</b></span>
+                        <a href="#matAutocomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatAutocomplete</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;auto&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="myControl"></a>
+                    <span class="name">
+                        <span ><b>myControl</b></span>
+                        <a href="#myControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngUnsubscribe"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>ngUnsubscribe</b></span>
+                        <a href="#ngUnsubscribe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;void&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subscriptions"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>subscriptions</b></span>
+                        <a href="#subscriptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="users"></a>
+                    <span class="name">
+                        <span ><b>users</b></span>
+                        <a href="#users"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/pages/theme-pages/company-management/company-management/collection-point/add-user-dialog/add-user-dialog/add-user-dialog.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnDestroy, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { FormControl } from &#x27;@angular/forms&#x27;;
+import { MatAutocomplete } from &#x27;@angular/material/autocomplete&#x27;;
+import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import {
+  startWith,
+  map,
+  Observable,
+  Subscription,
+  BehaviorSubject,
+  Subject,
+  takeUntil,
+} from &#x27;rxjs&#x27;;
+import { ApiService } from &#x27;src/app/_services/api/api.service&#x27;;
+import { CompanyServiceService } from &#x27;src/app/_services/company/company-service.service&#x27;;
+
+@Component({
+  selector: &#x27;app-add-user-dialog&#x27;,
+  templateUrl: &#x27;./add-user-dialog.component.html&#x27;,
+  styleUrls: [&#x27;./add-user-dialog.component.scss&#x27;],
+})
+export class AddUserDialogComponent implements OnInit, OnDestroy {
+  private subscriptions: Subscription[] &#x3D; [];
+  myControl &#x3D; new FormControl(&#x27;&#x27;);
+  users: any[] &#x3D; [];
+  filteredUsers: any[] &#x3D; [];
+  emailsWithAccess: Set&lt;string&gt; &#x3D; new Set&lt;string&gt;();
+
+  filteredOptions: Observable&lt;string[]&gt;;
+  private filteredOptionsSubject &#x3D; new BehaviorSubject&lt;string[]&gt;([]);
+
+  @ViewChild(&#x27;auto&#x27;) matAutocomplete: MatAutocomplete;
+  private ngUnsubscribe &#x3D; new Subject&lt;void&gt;();
+
+  constructor(
+    private apiService: ApiService,
+    private companyService: CompanyServiceService,
+    private snackBar: MatSnackBar,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+  ) {}
+
+  ngOnInit() {
+    this.subscriptions.push(this.fetchCollectionPointInformation());
+    this.subscriptions.push(this.fetchUsers());
+    this.filteredOptions &#x3D; this.filteredOptionsSubject.asObservable();
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue &#x3D; value.toLowerCase();
+    return this.filteredUsers
+      .filter(
+        (user) &#x3D;&gt;
+          (user.username || &#x27;&#x27;).toLowerCase().includes(filterValue) ||
+          (user.email || &#x27;&#x27;).toLowerCase().includes(filterValue),
+      )
+      .map((user) &#x3D;&gt; user.email);
+  }
+
+  fetchCollectionPointInformation(): Subscription {
+    return this.companyService
+      .getActiveCompany()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((activeCompany) &#x3D;&gt; {
+        if (activeCompany) {
+          this.apiService
+            .getCollectionPointInformation(
+              this.data.collectionPointId,
+              activeCompany.companyEndpoint,
+            )
+            .subscribe(
+              (response) &#x3D;&gt; {
+                console.log(&#x27;Collection Point Information:&#x27;, response);
+                this.emailsWithAccess &#x3D; new Set(
+                  response.userAccessList.map(
+                    (user: { email: any }) &#x3D;&gt; user.email,
+                  ),
+                );
+                this.filterUsersWithAccess();
+              },
+              (error) &#x3D;&gt; {
+                console.error(
+                  &#x27;Error fetching collection point information:&#x27;,
+                  error,
+                );
+              },
+            );
+        }
+      });
+  }
+
+  fetchUsers(): Subscription {
+    return this.companyService
+      .getActiveCompany()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((activeCompany) &#x3D;&gt; {
+        if (activeCompany) {
+          this.apiService.fetchUsers(activeCompany.id).subscribe(
+            (response) &#x3D;&gt; {
+              console.log(&#x27;Fetched Users:&#x27;, response);
+              this.users &#x3D; response.map((user) &#x3D;&gt; ({
+                id: user.id,
+                email: user.email,
+                username: user.username,
+              }));
+              this.filterUsersWithAccess();
+            },
+            (error) &#x3D;&gt; {
+              console.error(&#x27;Error fetching users:&#x27;, error);
+            },
+          );
+        }
+      });
+  }
+
+  filterUsersWithAccess(): void {
+    this.filteredUsers &#x3D; this.users.filter(
+      (user) &#x3D;&gt; !this.emailsWithAccess.has(user.email),
+    );
+    console.log(&#x27;Filtered Users:&#x27;, this.filteredUsers);
+
+    // Update the filteredOptionsSubject when filteredUsers changes
+    this.filteredOptionsSubject.next(
+      this.filteredUsers.map((user) &#x3D;&gt; user.email),
+    );
+  }
+
+  openAutocompletePanel(): void {
+    this.myControl.setValue(&#x27;&#x27;);
+    this.matAutocomplete._isOpen &#x3D; true;
+  }
+
+  addUserSubmit(): void {
+    const selectedEmail &#x3D; this.myControl.value;
+    this.companyService
+      .getActiveCompany()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((activeCompany) &#x3D;&gt; {
+        if (activeCompany) {
+          this.apiService
+            .addUserToCollectionPoint(
+              activeCompany.id,
+              this.data.collectionPointId,
+              selectedEmail,
+            )
+            .subscribe(
+              (response) &#x3D;&gt; {
+                // Successful response
+                this.showSnackbar(&#x27;User added successfully&#x27;, &#x27;success&#x27;);
+                console.log(&#x27;Response: &#x27;, response);
+
+                // Clear the autocomplete input
+                this.myControl.setValue(&#x27;&#x27;);
+
+                // Remove the added person from the autocomplete list
+                this.removeUserFromAutocomplete(selectedEmail);
+              },
+              (error) &#x3D;&gt; {
+                // Error handling
+                this.showSnackbar(&#x27;Error adding user&#x27;, &#x27;error&#x27;);
+                console.error(&#x27;Error adding user:&#x27;, error);
+              },
+            );
+        }
+      });
+  }
+
+  private removeUserFromAutocomplete(email: any): void {
+    const index &#x3D; this.users.findIndex((user) &#x3D;&gt; user.email &#x3D;&#x3D;&#x3D; email);
+    if (index !&#x3D;&#x3D; -1) {
+      this.users.splice(index, 1);
+      this.filterUsersWithAccess(); // Update the filteredUsers and options
+    }
+  }
+
+  private showSnackbar(message: string, panelClass: string): void {
+    this.snackBar.open(message, &#x27;Close&#x27;, {
+      duration: 3000, // Adjust the duration as needed
+      panelClass: panelClass, // Use &#x27;success&#x27; or &#x27;error&#x27; as classes for styling
+    });
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.forEach((subscription) &#x3D;&gt; subscription.unsubscribe());
+
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;form-container&quot;&gt;
+  &lt;h2 mat-dialog-title&gt;Grant User Access to &#x27;{{ data.collectionPointId }}&#x27;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;mat-dialog-content class&#x3D;&quot;mat-typography&quot;&gt;
+  &lt;div class&#x3D;&quot;form-container&quot;&gt;
+    &lt;mat-form-field class&#x3D;&quot;example-full-width&quot; [style.width.px]&#x3D;&quot;250&quot;&gt;
+      &lt;mat-label&gt;Employees&lt;/mat-label&gt;
+      &lt;input
+        type&#x3D;&quot;text&quot;
+        placeholder&#x3D;&quot;Select an Employee&quot;
+        aria-label&#x3D;&quot;Employees&quot;
+        matInput
+        [formControl]&#x3D;&quot;myControl&quot;
+        [matAutocomplete]&#x3D;&quot;auto&quot;
+        (click)&#x3D;&quot;openAutocompletePanel()&quot;
+      /&gt;
+      &lt;mat-autocomplete #auto&#x3D;&quot;matAutocomplete&quot;&gt;
+        &lt;mat-option *ngFor&#x3D;&quot;let user of filteredOptions | async&quot; [value]&#x3D;&quot;user&quot;&gt;
+          {{ user }}
+        &lt;/mat-option&gt;
+      &lt;/mat-autocomplete&gt;
+    &lt;/mat-form-field&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;form-container&quot;&gt;
+    &lt;mat-dialog-content class&#x3D;&quot;mat-typography&quot;&gt;
+      &lt;p&gt;
+        Warning! Granting user access to this endpoint will allow them to view
+        customer data associated, proceed with caution.
+      &lt;/p&gt;
+    &lt;/mat-dialog-content&gt;
+  &lt;/div&gt;
+&lt;/mat-dialog-content&gt;
+&lt;mat-dialog-actions align&#x3D;&quot;end&quot;&gt;
+  &lt;button mat-button mat-dialog-close cdkfocusinitial&gt;Cancel&lt;/button&gt;
+  &lt;button mat-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;addUserSubmit()&quot;&gt;Add User&lt;/button&gt;
+&lt;/mat-dialog-actions&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./add-user-dialog.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/* Add this CSS to your component&#x27;s style file or your global styles */
+.form-container {
+  display: flex;
+  flex-direction: column; /* Align form fields vertically */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically */
+  text-align: center; /* Center text within form fields */
+}
+
+.wider-textarea {
+  width: 100%; /* Set the width to 100% to make it expand horizontally */
+}
+
+/* Add these styles to your component&#x27;s CSS file */
+.success {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.error {
+  background-color: #f44336;
+  color: #fff;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="form-container">  <h2 mat-dialog-title>Grant User Access to \'{{ data.collectionPointId }}\'</h2></div><mat-dialog-content class="mat-typography">  <div class="form-container">    <mat-form-field class="example-full-width" [style.width.px]="250">      <mat-label>Employees</mat-label>      <input        type="text"        placeholder="Select an Employee"        aria-label="Employees"        matInput        [formControl]="myControl"        [matAutocomplete]="auto"        (click)="openAutocompletePanel()"      />      <mat-autocomplete #auto="matAutocomplete">        <mat-option *ngFor="let user of filteredOptions | async" [value]="user">          {{ user }}        </mat-option>      </mat-autocomplete>    </mat-form-field>  </div>  <div class="form-container">    <mat-dialog-content class="mat-typography">      <p>        Warning! Granting user access to this endpoint will allow them to view        customer data associated, proceed with caution.      </p>    </mat-dialog-content>  </div></mat-dialog-content><mat-dialog-actions align="end">  <button mat-button mat-dialog-close cdkfocusinitial>Cancel</button>  <button mat-button color="primary" (click)="addUserSubmit()">Add User</button></mat-dialog-actions></div>'
+    var COMPONENTS = [{'name': 'AccountSettingComponent', 'selector': 'app-account-setting'},{'name': 'AddUserDialogComponent', 'selector': 'app-add-user-dialog'},{'name': 'AppAccountSettingsRedirectComponent', 'selector': 'app-account-settings'},{'name': 'AppBoxedForgotPasswordComponent', 'selector': 'app-boxed-forgot-password'},{'name': 'AppBoxedLoginComponent', 'selector': 'app-boxed-login'},{'name': 'AppBoxedRegisterComponent', 'selector': 'app-boxed-register'},{'name': 'AppBoxedTwoStepsComponent', 'selector': 'app-boxed-two-steps'},{'name': 'AppBreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'AppCompanyManagementRedirectComponent', 'selector': 'app-company-management'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDashboard1Component', 'selector': 'app-dashboard1'},{'name': 'AppErrorComponent', 'selector': 'app-error'},{'name': 'AppFormManagementRedirectComponent', 'selector': 'app-form-management'},{'name': 'AppHorizontalHeaderComponent', 'selector': 'app-horizontal-header'},{'name': 'AppHorizontalNavItemComponent', 'selector': 'app-horizontal-nav-item'},{'name': 'AppHorizontalSearchDialogComponent', 'selector': 'app-search-dialog'},{'name': 'AppHorizontalSidebarComponent', 'selector': 'app-horizontal-sidebar'},{'name': 'AppLandingpageComponent', 'selector': 'app-landingpage'},{'name': 'AppMaintenanceComponent', 'selector': 'app-maintenance'},{'name': 'AppMixTableComponent', 'selector': 'app-mix-table'},{'name': 'AppNavItemComponent', 'selector': 'app-nav-item'},{'name': 'AppQRCodeGenerationRedirectComponent', 'selector': 'app-qr-redirect-component'},{'name': 'AppScanHistoryRedirectWidget', 'selector': 'app-scan-history-component'},{'name': 'AppScanIdComponent', 'selector': 'app-scan-id'},{'name': 'AppScanIdRedirectComponent', 'selector': 'app-redirect-id'},{'name': 'AppSideForgotPasswordComponent', 'selector': 'app-side-forgot-password'},{'name': 'AppSideLoginComponent', 'selector': 'app-side-login'},{'name': 'AppSideRegisterComponent', 'selector': 'app-side-register'},{'name': 'AppSideTwoStepsComponent', 'selector': 'app-side-two-steps'},{'name': 'BlankComponent', 'selector': 'app-blank'},{'name': 'BrandingComponent', 'selector': 'app-branding'},{'name': 'CheckingIpsDialogComponent', 'selector': 'app-checking-ips-dialog'},{'name': 'CollectionPointComponent', 'selector': 'app-collection-point'},{'name': 'CollectionPointDeleteDialog', 'selector': 'delete-point-dialog'},{'name': 'CommonScanIdComponent', 'selector': 'app-common-scan-id'},{'name': 'CompanyManagementComponent', 'selector': 'app-company-management'},{'name': 'ConsentDialogComponent', 'selector': 'app-consent-dialog'},{'name': 'CreateCompanyComponent', 'selector': 'app-create-company'},{'name': 'CreateNewFormDialogComponent', 'selector': 'app-create-new-form-dialog'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DeactivatedCollectionPointDialogComponent', 'selector': 'app-deactivated-collection-point-dialog'},{'name': 'DeleteFormDialogComponent', 'selector': 'app-delete-form-dialog'},{'name': 'DesktopQrCodeScanIdComponent', 'selector': 'desktop-qr-code-scan-id'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'dialog-dialog'},{'name': 'DialogAnimationsExampleDialog', 'selector': 'register-dialog'},{'name': 'ExpandDataModalMobileComponent', 'selector': 'app-expanded-data-modal'},{'name': 'ExpandedDataModalComponent', 'selector': 'app-expanded-data-modal'},{'name': 'FailedJobsDialogComponent', 'selector': 'app-failed-jobs-dialog'},{'name': 'FormDialogComponent', 'selector': 'app-expanded-form-dialog'},{'name': 'FormManagementComponent', 'selector': 'app-form-management'},{'name': 'FormsTableComponent', 'selector': 'app-forms-table'},{'name': 'FullComponent', 'selector': 'app-full'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HowDoesThisWorkDialogComponent', 'selector': 'app-how-does-this-work-dialog'},{'name': 'HowItWorksComponent', 'selector': 'app-how-it-works'},{'name': 'InviteUsersComponent', 'selector': 'app-invite-users'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'MobileScanIdComponent', 'selector': 'app-mobile-scan-id'},{'name': 'NoCollectionPointsDialogComponent', 'selector': 'app-no-collection-points-dialog'},{'name': 'RedirectDialogComponent', 'selector': 'app-redirect-dialog'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TimeoutDialogComponent', 'selector': 'app-timeout-dialog'},{'name': 'UpdateEmailDialogComponent', 'selector': 'app-update-email-dialog'},{'name': 'UpdateFormDialogComponent', 'selector': 'app-update-form-dialog'},{'name': 'UpdatePasswordDialogComponent', 'selector': 'app-update-password-dialog'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViewUsersComponent', 'selector': 'app-view-users'},{'name': 'WelcomeDialogComponent', 'selector': 'app-welcome-dialog'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AddUserDialogComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AddUserDialogComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //background: #CFD8DC;
+}
+
+/* Define colors */
+$white: #ffffff;
+$lightGray: #cfd8dc;
+$blue: #006064;
+$darkGray: #263238;
+$black: #151718;
+$blackest: #000000;
+$pink: #f50057;
+
+/* Additional styling for specific elements within the component */
+
+body {
+  font-family: "Roboto";
+  font-size: 1.3rem;
+  //background: #CFD8DC; //Figre out why tf this isn't making the whole site background change, seems html.light-theme is forcing the page to swap colour outside of the body. Dicuss this with Damon!!!
+}
+
+a {
+  color: #263238;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 2rem;
+}
+
+.main-header {
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.main-header h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.main-header h1 span {
+  color: #f50057;
+}
+
+.main-header p {
+  font-size: 2rem;
+}
+
+//Controls size of images (How mucb of the container they consume)
+img {
+  width: 90%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr; // Controls horizontal grid
+  grid-gap: 2rem;
+  margin-bottom: 30rem; // Controls space between Animations
+
+  .custom-expand-button {
+    width: 50%; // Set the button width to 50% of its parent's width (the section)
+    // Add other styles specific to this button if needed
+  }
+
+  .card-buttons {
+    display: flex;
+    flex-direction: column; // Stack buttons vertically
+    align-items: center; // Center buttons horizontally within the container
+    margin-top: 4rem;
+
+    button {
+      margin-top: 0.5rem; // Adjust the spacing between the buttons (reduce margin)
+    }
+  }
+}
+
+.card button {
+  margin-top: 6rem;
+  margin-left: 8rem;
+}
+
+.card-button-upload {
+  margin-top: 6rem;
+  margin-left: 10rem;
+}
+
+.card h3 {
+  margin-bottom: 2rem;
+}
+
+.card img {
+  height: 400px;
+}
+
+.card > div {
+  padding: 2rem;
+}
+
+//This should theretically flip the img view in the grid, however doesn't seem to be working. Need to work on this.
+.card:nthchild(even) img {
+  order: 2;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #f50057;
+  padding: 0.8rem 1.8rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.scan-return {
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  //text-decoration: underline; //Underlines text, unsure if I want this
+}
+
+.scan-return:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .card {
+    display: block;
+  }
+}
+
+/* Styling for the footer */
+
+#main-footer {
+  display: none; //Hides the footer
+}
+
+footer {
+  background-color: $black;
+  color: $white;
+  padding: 16px;
+  display: flex;
+  /* Use flex display to control alignment */
+  justify-content: space-between;
+  /* Spread items to the left and right */
+  align-items: center;
+  /* Align items vertically in the center */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Styling for the footer logo */
+footer img {
+  width: 15%;
+  /* Set the logo size to 1/4th of its original size */
+}
+
+.footer-links a {
+  margin-left: 20px;
+  /* Add spacing between links if desired */
+  color: $blue;
+  /* Set the color to the desired blue color */
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  display: none;
+}
+
+.italic-text {
+  font-style: italic;
+  font-size: smaller;
+}

@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Spring Boot" type="Application" factoryName="Application">
+    <envs>
+      <env name="POSTGRES_USER" value="identify" />
+      <env name="POSTGRES_PASS" value="Dev123!" />
+      <env name="POSTGRES_URL" value="jdbc:postgresql://localhost:5432/identify" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.team.identify.IdentifyAPI.IdentifyApiApplication" />
+    <module name="IdentifyAPI" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Docker Dependencies" run_configuration_type="docker-deploy" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,11 @@
+.main {
+  padding: 100px;
+}
+
+.layout-table {
+  width: 100%;
+}
+
+mat-form-field {
+  padding: 5px;
+}

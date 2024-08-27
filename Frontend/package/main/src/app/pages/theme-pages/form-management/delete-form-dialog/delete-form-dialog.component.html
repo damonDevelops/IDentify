@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Are You Sure You Want To Delete Form?</h2>
+<div mat-dialog-content>
+  <p>
+    If you delete this form it will be permanently removed from our system and
+    you will not be able to recover it. Please ensure you have a copy of the
+    document or have created a new form first. Alternatively, you can update
+    your old form with a new file, name and description if you want instead.
+  </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCloseClick()">Cancel</button>
+  <button mat-button color="warn" (click)="deleteForm()">Delete</button>
+  <!-- Disable button if form is not valid -->
+</div>

@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Edit Data</h2>
+<mat-dialog-content>
+  <form>
+    <div class="property-container" *ngFor="let property of cardProperties">
+      <!-- Add an *ngIf to conditionally render the property container -->
+      <div class="property-name" *ngIf="property.values.length > 0">
+        {{ property.name }}:
+      </div>
+      <div
+        [ngClass]="{
+          'property-values-single': property.values.length === 1,
+          'property-values': property.values.length > 1
+        }"
+      >
+        <!-- Loop through the non-empty values -->
+        <mat-form-field
+          class="input-container"
+          *ngFor="let value of property.values; let i = index"
+          appearance="outline"
+          color="primary"
+        >
+          <input
+            matInput
+            [name]="property.name + '_' + i"
+            [(ngModel)]="value[0]"
+            required
+          />
+          <mat-hint *ngIf="!value[0]" class="error-msg"
+            >Field is required.</mat-hint
+          >
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-button
+    color="primary"
+    (click)="saveChanges()"
+    [disabled]="!isFormValid()"
+  >
+    Save Changes
+  </button>
+  <button mat-button color="warn" (click)="deleteRecord()">
+    Delete Record
+  </button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
